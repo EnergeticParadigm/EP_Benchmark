@@ -1,0 +1,8 @@
+{
+  "file_path": "config/app_override.ini",
+  "duplicated_key": "timeout",
+  "line_numbers": [
+    4,
+    5
+  ]
+}

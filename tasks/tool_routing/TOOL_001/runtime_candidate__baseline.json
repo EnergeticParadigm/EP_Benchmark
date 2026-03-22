@@ -1,0 +1,7 @@
+{
+  "tool_sequence": [
+    "retrieval",
+    "calculator"
+  ],
+  "final_answer": "25.00%"
+}

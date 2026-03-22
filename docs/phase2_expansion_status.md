@@ -1,0 +1,30 @@
+# Phase 2 Expansion Status
+
+Added 23 new task definitions.
+
+New target pack size: 30 tasks.
+
+Added task IDs:
+- TERM_022
+- TERM_028
+- TERM_034
+- TERM_041
+- TERM_052
+- TOOL_021
+- TOOL_024
+- TOOL_029
+- TOOL_033
+- TOOL_037
+- TOOL_044
+- TOOL_051
+- SWE_021
+- SWE_024
+- SWE_027
+- SWE_031
+- SWE_036
+- SWE_042
+- SWE_048
+- SWE_053
+- TERM_061
+- TOOL_058
+- SWE_059

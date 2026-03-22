@@ -1,0 +1,22 @@
+{
+  "task_id": "SWE_024",
+  "task_group": "swe",
+  "title": "Normalize empty return",
+  "purpose": "Test semantic consistency when empty path returns wrong type.",
+  "setup": "Non-empty path returns dict but empty path returns None.",
+  "input": "Repair the implementation so interface stays consistent.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Consistent return type",
+    "Tests pass"
+  ],
+  "common_failure_types": [
+    "patches caller",
+    "keeps inconsistent empty path",
+    "new regression"
+  ]
+}

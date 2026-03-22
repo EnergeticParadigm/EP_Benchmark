@@ -1,0 +1,22 @@
+{
+  "task_id": "SWE_059",
+  "task_group": "swe",
+  "title": "Restore missing guard",
+  "purpose": "Test code repair where an omitted guard creates a latent edge-case crash.",
+  "setup": "Core path passes but empty-input path crashes due to missing guard.",
+  "input": "Restore the missing guard and pass tests.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Guard restored",
+    "Tests pass"
+  ],
+  "common_failure_types": [
+    "wrong guard location",
+    "partial fix",
+    "new regression"
+  ]
+}

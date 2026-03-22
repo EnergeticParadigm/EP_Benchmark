@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_006",
+  "task_group": "tool_routing",
+  "mode": "baseline",
+  "model_name": "TOOL_006_BASELINE",
+  "success": false,
+  "final_output": "{\"tool_sequence\": [\"retrieval_a\"], \"final_answer\": \"2021\", \"evidence_snippet\": \"The launch year might be 2021.\"}",
+  "step_count": 1,
+  "tool_call_count": 1,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0199,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "wrong_route",
+  "notes": "TOOL_006 baseline stayed on retrieval_a and did not reroute."
+}

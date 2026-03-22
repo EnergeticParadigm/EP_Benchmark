@@ -1,0 +1,41 @@
+{
+  "release_name": "ep_benchmark_v1_phase2_complete",
+  "benchmark_status": "frozen",
+  "task_count": 32,
+  "task_execution_status": "fully_executed",
+  "modes": [
+    "baseline",
+    "baseline_scaffold",
+    "ep"
+  ],
+  "headline_metrics": {
+    "baseline": {
+      "success_rate": 0.4375,
+      "invalid_tool_rate": 0.1875,
+      "checkpoint_rate": 0.0,
+      "rollback_rate": 0.0312
+    },
+    "baseline_scaffold": {
+      "success_rate": 0.875,
+      "invalid_tool_rate": 0.0938,
+      "checkpoint_rate": 0.0,
+      "rollback_rate": 0.125
+    },
+    "ep": {
+      "success_rate": 0.9688,
+      "invalid_tool_rate": 0.0,
+      "checkpoint_rate": 0.25,
+      "rollback_rate": 0.25
+    }
+  },
+  "paired_significance": {
+    "baseline_vs_baseline_scaffold": 0.000122,
+    "baseline_vs_ep": 1.5e-05,
+    "baseline_scaffold_vs_ep": 0.25
+  },
+  "source_paths": {
+    "reports": "/Users/wesleyshu/ep_benchmark_v1/results/reports",
+    "scored": "/Users/wesleyshu/ep_benchmark_v1/results/scored",
+    "raw": "/Users/wesleyshu/ep_benchmark_v1/results/raw"
+  }
+}

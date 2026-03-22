@@ -1,0 +1,5 @@
+{
+  "tool_sequence": ["retrieval_a", "retrieval_b"],
+  "final_answer": "2022",
+  "evidence_snippet": "Orion Analytics Suite was officially launched in 2022 after the beta program closed in late 2021."
+}

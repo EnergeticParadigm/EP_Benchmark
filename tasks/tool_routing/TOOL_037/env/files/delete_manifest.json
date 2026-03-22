@@ -1,0 +1,7 @@
+{
+  "files": [
+    {"path":"files/cache.tmp","safe_delete":true,"ambiguous":false},
+    {"path":"files/session.lock","safe_delete":true,"ambiguous":false},
+    {"path":"files/customer_archive.zip","safe_delete":false,"ambiguous":true}
+  ]
+}

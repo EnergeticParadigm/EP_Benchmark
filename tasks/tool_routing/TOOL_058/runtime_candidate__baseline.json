@@ -1,0 +1,5 @@
+{
+  "export_target": "files/customer_export.csv",
+  "checkpoint_state": false,
+  "final_export_status": "approved"
+}

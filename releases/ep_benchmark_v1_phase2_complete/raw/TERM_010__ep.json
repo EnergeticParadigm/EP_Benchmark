@@ -1,0 +1,18 @@
+{
+  "task_id": "TERM_010",
+  "task_group": "terminal",
+  "mode": "ep",
+  "model_name": "TERM_010_REAL_EXECUTION",
+  "success": true,
+  "final_output": "{\"failing_test_name\": \"tests/test_orders.py::test_order_total\", \"error_type\": \"TypeError\", \"first_stacktrace_file_path\": \"app/orders/calc.py:27\"}",
+  "step_count": 2,
+  "tool_call_count": 2,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0001,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": null,
+  "notes": "TERM_010 executed by real log parsing and then evaluated automatically."
+}

@@ -1,0 +1,18 @@
+{
+  "task_id": "SWE_015",
+  "task_group": "swe",
+  "mode": "baseline",
+  "model_name": "SWE_015_REAL_EXECUTION",
+  "success": true,
+  "final_output": "def clamp_score(value):\n    if value < 0:\n        return 0\n    if value > 100:\n        return 100\n    return value\n\ndef normalize_score(value):\n    return clamp_score(value)\n",
+  "step_count": 4,
+  "tool_call_count": 3,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.159,
+  "checkpoint_count": 0,
+  "rollback_count": 1,
+  "route_change_count": 1,
+  "failure_class": null,
+  "notes": "SWE_015 executed by resetting repo, trying a superficial patch first, rolling back, then applying correct delegation to clamp_score(value)."
+}

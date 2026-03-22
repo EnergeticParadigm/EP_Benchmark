@@ -1,0 +1,21 @@
+{
+  "task_id": "TOOL_021",
+  "task_group": "tool_routing",
+  "title": "Retrieve then normalize unit",
+  "purpose": "Test route order when retrieval must precede unit conversion.",
+  "setup": "Source material contains one number in MB that must be converted to GB.",
+  "input": "Return the converted value with two decimals and the tool sequence.",
+  "allowed_tools": [
+    "retrieval",
+    "calculator"
+  ],
+  "success_criteria": [
+    "Correct tool order",
+    "Correct normalized value"
+  ],
+  "common_failure_types": [
+    "calculator before retrieval",
+    "wrong unit conversion",
+    "missing sequence"
+  ]
+}

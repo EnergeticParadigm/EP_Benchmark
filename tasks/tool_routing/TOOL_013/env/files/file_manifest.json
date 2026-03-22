@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "files/cache.tmp",
+      "type": "temp",
+      "action": "remove"
+    },
+    {
+      "path": "files/session.lock",
+      "type": "lock",
+      "action": "remove"
+    },
+    {
+      "path": "files/customer_data.csv",
+      "type": "data",
+      "action": "keep"
+    },
+    {
+      "path": "files/report_final.pdf",
+      "type": "document",
+      "action": "keep"
+    }
+  ]
+}

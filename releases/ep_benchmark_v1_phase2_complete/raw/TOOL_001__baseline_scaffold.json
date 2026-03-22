@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_001",
+  "task_group": "tool_routing",
+  "mode": "baseline_scaffold",
+  "model_name": "TOOL_001_REAL_EXECUTION",
+  "success": true,
+  "final_output": "{\"tool_sequence\": [\"retrieval\", \"calculator\"], \"final_answer\": \"25.00%\"}",
+  "step_count": 2,
+  "tool_call_count": 2,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0193,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": null,
+  "notes": "TOOL_001 executed by retrieval of values first, then calculator-style ratio computation, then evaluated automatically."
+}

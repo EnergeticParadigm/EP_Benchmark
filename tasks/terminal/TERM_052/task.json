@@ -1,0 +1,22 @@
+{
+  "task_id": "TERM_052",
+  "task_group": "terminal",
+  "title": "Generate exact audit digest",
+  "purpose": "Test shell-based extraction plus exact structured output creation.",
+  "setup": "Audit data must be summarized into an exact JSON schema.",
+  "input": "Create a digest with actor_count, failed_events, and latest_critical_event.",
+  "allowed_tools": [
+    "shell"
+  ],
+  "success_criteria": [
+    "Exact JSON schema",
+    "Correct actor count",
+    "Correct failed event count",
+    "Correct latest critical event"
+  ],
+  "common_failure_types": [
+    "schema mismatch",
+    "wrong latest event",
+    "count drift"
+  ]
+}

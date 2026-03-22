@@ -1,0 +1,4 @@
+mode,success_rate,avg_tokens,avg_runtime,avg_steps,invalid_tool_rate,rollback_rate,checkpoint_rate
+baseline,0.4375,0.0,0.046,2.0,0.1875,0.0312,0.0
+baseline_scaffold,0.875,0.0,0.0525,2.5,0.0938,0.125,0.0
+ep,0.9688,0.0,0.0464,2.5,0.0,0.25,0.25

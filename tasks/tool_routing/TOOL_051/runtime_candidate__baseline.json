@@ -1,0 +1,7 @@
+{
+  "tool_sequence": [
+    "retrieval_a"
+  ],
+  "final_answer": "west|0",
+  "evidence_snippet": "This first route is incomplete and should not be trusted as final."
+}

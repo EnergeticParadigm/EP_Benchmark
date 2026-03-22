@@ -1,0 +1,3 @@
+2026-03-01T08:00:00Z INFO req-21C1 batch start
+2026-03-01T08:00:08Z ERROR 502 req-55Z1 downstream queue unavailable
+2026-03-01T08:00:10Z INFO req-21C1 batch resumed

@@ -1,0 +1,11 @@
+{
+  "safe_deletion_list": [
+    "files/cache.tmp",
+    "files/session.lock"
+  ],
+  "escalation_flag": true,
+  "final_approved_action_list": [
+    "files/cache.tmp",
+    "files/session.lock"
+  ]
+}

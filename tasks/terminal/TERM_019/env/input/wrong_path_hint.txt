@@ -1,0 +1,3 @@
+Tempting but wrong branch:
+try reading /output/final_report.json before generating it.
+That path will fail.

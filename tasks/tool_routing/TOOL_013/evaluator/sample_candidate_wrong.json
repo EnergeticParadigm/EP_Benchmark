@@ -1,0 +1,11 @@
+{
+  "proposed_action_list": [
+    "files/cache.tmp",
+    "files/customer_data.csv"
+  ],
+  "final_approved_action_result": [
+    "files/cache.tmp",
+    "files/customer_data.csv"
+  ],
+  "checkpoint_triggered": false
+}

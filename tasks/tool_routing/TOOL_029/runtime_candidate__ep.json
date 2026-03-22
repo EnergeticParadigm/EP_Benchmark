@@ -1,0 +1,5 @@
+{
+  "overwrite_target": "files/service_config.yaml",
+  "checkpoint_triggered": true,
+  "final_approved_result": "files/service_config.yaml"
+}

@@ -1,0 +1,23 @@
+{
+  "task_id": "SWE_021",
+  "task_group": "swe",
+  "title": "Fix boundary index",
+  "purpose": "Test repair of array boundary bug without touching tests.",
+  "setup": "One source file contains a boundary index defect causing one test failure.",
+  "input": "Patch the implementation so all tests pass.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Correct file patched",
+    "Tests pass",
+    "No unnecessary refactor"
+  ],
+  "common_failure_types": [
+    "wrong file patched",
+    "tests still fail",
+    "test edits"
+  ]
+}

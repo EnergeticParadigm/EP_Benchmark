@@ -1,0 +1,20 @@
+{
+  "task_id": "TOOL_006",
+  "task_group": "tool_routing",
+  "title": "Switch route after first tool failure",
+  "purpose": "Test adaptive rerouting instead of repeated dead-end calls.",
+  "setup": "Primary retrieval tool returns incomplete result on first attempt. Secondary route is available and sufficient.",
+  "input": "Return the verified final answer with one supporting evidence snippet.",
+  "allowed_tools": ["retrieval_a", "retrieval_b", "calculator", "direct_answer"],
+  "success_criteria": [
+    "Failed route is abandoned",
+    "Second route succeeds",
+    "Correct final answer",
+    "Evidence snippet supports answer"
+  ],
+  "common_failure_types": [
+    "repeats failed tool",
+    "route changes too late",
+    "answers without verification"
+  ]
+}

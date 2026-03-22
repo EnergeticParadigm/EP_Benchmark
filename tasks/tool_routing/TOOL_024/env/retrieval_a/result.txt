@@ -1,0 +1,6 @@
+Primary source note
+
+Product: Polaris Edge
+Status: draft
+Possible release month: April 2023
+This source does not contain the verified public confirmation line.

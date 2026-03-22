@@ -1,0 +1,20 @@
+{
+  "task_id": "TERM_001",
+  "task_group": "terminal",
+  "title": "Find target log line from nested directories",
+  "purpose": "Test search strategy, shell command selection, and output precision.",
+  "setup": "Directory tree contains multiple subfolders and log files. Only one line matches both ERROR 502 and request id req-77A9.",
+  "input": "Find the exact matching line and return full relative file path, line number, and exact line content.",
+  "allowed_tools": ["shell"],
+  "success_criteria": [
+    "Correct file path",
+    "Correct line number",
+    "Exact line content"
+  ],
+  "common_failure_types": [
+    "wrong file",
+    "partial match",
+    "grep pattern too broad",
+    "approximate answer instead of exact line"
+  ]
+}

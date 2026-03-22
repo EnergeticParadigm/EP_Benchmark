@@ -1,0 +1,22 @@
+{
+  "task_id": "SWE_048",
+  "task_group": "swe",
+  "title": "Fix datetime branch",
+  "purpose": "Test repair of branch-specific datetime formatting bug.",
+  "setup": "UTC path passes but local-time path returns malformed output.",
+  "input": "Repair formatting implementation and pass tests.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Correct branch fixed",
+    "Tests pass"
+  ],
+  "common_failure_types": [
+    "patches wrong timezone branch",
+    "format regression",
+    "partial pass"
+  ]
+}

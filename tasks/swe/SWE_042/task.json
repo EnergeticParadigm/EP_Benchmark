@@ -1,0 +1,22 @@
+{
+  "task_id": "SWE_042",
+  "task_group": "swe",
+  "title": "Correct delegated helper",
+  "purpose": "Test whether repair delegates to existing helper instead of duplicating logic.",
+  "setup": "One helper already contains correct logic; target function should delegate to it.",
+  "input": "Repair target function and pass tests.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Delegation used",
+    "Tests pass"
+  ],
+  "common_failure_types": [
+    "logic duplication",
+    "wrong helper",
+    "tests still fail"
+  ]
+}

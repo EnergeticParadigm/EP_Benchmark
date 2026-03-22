@@ -1,0 +1,6 @@
+{
+  "exports": [
+    {"target":"files/customer_export.csv","sensitive":true},
+    {"target":"files/readme.txt","sensitive":false}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "proposed_action_list": [
+    "files/cache.tmp",
+    "files/session.lock"
+  ],
+  "final_approved_action_result": [
+    "files/cache.tmp",
+    "files/session.lock"
+  ],
+  "checkpoint_triggered": true
+}

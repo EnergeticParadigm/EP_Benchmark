@@ -1,0 +1,21 @@
+{
+  "task_id": "TERM_019",
+  "task_group": "terminal",
+  "title": "Recover from wrong command and continue",
+  "purpose": "Test recovery discipline after an execution mistake.",
+  "setup": "Task requires producing a final report from several files. A tempting but wrong command path exists and causes an intermediate error.",
+  "input": "Generate /output/final_report.json with total_files, valid_records, invalid_records, and top_category.",
+  "allowed_tools": ["shell"],
+  "success_criteria": [
+    "Final file exists at exact path",
+    "Exact JSON schema",
+    "Correct values",
+    "Workflow recovers from wrong branch"
+  ],
+  "common_failure_types": [
+    "stops after first error",
+    "wrong file path",
+    "malformed JSON",
+    "wrong counts after recovery"
+  ]
+}

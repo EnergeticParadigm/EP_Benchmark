@@ -1,0 +1,22 @@
+{
+  "task_id": "SWE_036",
+  "task_group": "swe",
+  "title": "Preserve schema fields",
+  "purpose": "Test bug fix that must preserve full schema shape across branches.",
+  "setup": "One repair path may drop a required field while fixing the immediate error.",
+  "input": "Repair implementation and preserve required schema.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Schema preserved",
+    "Tests pass"
+  ],
+  "common_failure_types": [
+    "drops field",
+    "fixes only immediate error",
+    "hidden schema regression"
+  ]
+}

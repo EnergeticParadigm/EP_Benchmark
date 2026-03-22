@@ -1,0 +1,5 @@
+{
+  "failing_test_name": "tests/test_orders.py::test_order_total",
+  "error_type": "TypeError",
+  "first_stacktrace_file_path": "app/orders/calc.py:27"
+}

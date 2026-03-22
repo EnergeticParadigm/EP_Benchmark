@@ -1,0 +1,21 @@
+{
+  "task_id": "TERM_061",
+  "task_group": "terminal",
+  "title": "Find active certificate pair",
+  "purpose": "Test exact terminal extraction where multiple stale certificate files exist.",
+  "setup": "Several certificate files are present, but only one matched pair is currently active.",
+  "input": "Return active cert path, active key path, and expiry date.",
+  "allowed_tools": [
+    "shell"
+  ],
+  "success_criteria": [
+    "Correct cert path",
+    "Correct key path",
+    "Correct expiry date"
+  ],
+  "common_failure_types": [
+    "stale pair selected",
+    "wrong expiry date",
+    "partial answer"
+  ]
+}

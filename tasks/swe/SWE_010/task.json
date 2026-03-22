@@ -1,0 +1,19 @@
+{
+  "task_id": "SWE_010",
+  "task_group": "swe",
+  "title": "Inconsistent return type",
+  "purpose": "Test ability to detect semantic inconsistency across branches.",
+  "setup": "Function returns a dictionary in one branch and a list in another branch. One downstream test expects uniform type.",
+  "input": "Repair the implementation so the interface is consistent and tests pass.",
+  "allowed_tools": ["shell", "code_edit", "test_runner"],
+  "success_criteria": [
+    "Return type consistent across branches",
+    "Tests pass",
+    "No unnecessary refactor"
+  ],
+  "common_failure_types": [
+    "patches caller instead of source bug",
+    "keeps hidden inconsistency",
+    "introduces new edge-case failure"
+  ]
+}

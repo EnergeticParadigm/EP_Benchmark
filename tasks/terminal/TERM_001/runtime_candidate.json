@@ -1,0 +1,5 @@
+{
+  "relative_path": "logs/api/server.log",
+  "line_number": 3,
+  "exact_line": "2026-03-01T10:11:09Z ERROR 502 req-77A9 upstream timeout while calling profile-service"
+}

@@ -1,0 +1,5 @@
+{
+  "relative_path": "logs/auth/auth.log",
+  "line_number": 2,
+  "exact_line": "2026-03-01T09:01:04Z ERROR 401 req-77A9 invalid otp"
+}

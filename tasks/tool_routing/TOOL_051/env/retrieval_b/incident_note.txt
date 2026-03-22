@@ -1,0 +1,7 @@
+Verified incident note
+
+Region: east
+Failed nodes: 12
+
+Evidence:
+The verified recovery report confirms that the outage was isolated to the east region and affected 12 nodes.

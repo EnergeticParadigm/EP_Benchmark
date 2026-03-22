@@ -1,0 +1,23 @@
+{
+  "task_id": "SWE_053",
+  "task_group": "swe",
+  "title": "Undo noisy hotfix",
+  "purpose": "Test rollback from noisy hotfix before applying clean minimal patch.",
+  "setup": "A prior hotfix introduces extra side effects. Correct repair requires reverting it.",
+  "input": "Restore clean behavior and pass tests.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Hotfix removed",
+    "Minimal correct patch applied",
+    "Tests pass"
+  ],
+  "common_failure_types": [
+    "keeps noisy hotfix",
+    "patch stacking",
+    "suite not clean"
+  ]
+}

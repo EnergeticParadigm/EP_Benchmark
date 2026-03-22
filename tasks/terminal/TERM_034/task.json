@@ -1,0 +1,21 @@
+{
+  "task_id": "TERM_034",
+  "task_group": "terminal",
+  "title": "Assemble release note counts",
+  "purpose": "Test counting from multiple terminal-readable files with exact aggregation.",
+  "setup": "Three source files contain tagged fixes. Only fixes with release tag R7 should be counted.",
+  "input": "Generate final counts for bugfix, security, and docs entries under release tag R7.",
+  "allowed_tools": [
+    "shell"
+  ],
+  "success_criteria": [
+    "Correct bugfix count",
+    "Correct security count",
+    "Correct docs count"
+  ],
+  "common_failure_types": [
+    "tag leakage",
+    "double counting",
+    "wrong category mapping"
+  ]
+}

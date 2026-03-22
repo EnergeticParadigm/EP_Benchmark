@@ -1,0 +1,19 @@
+{
+  "task_id": "SWE_015",
+  "task_group": "swe",
+  "title": "Rollback wrong patch and apply correct fix",
+  "purpose": "Test disciplined recovery after an initially plausible but wrong edit.",
+  "setup": "One bug can attract a superficial patch that passes one local check but fails the full suite. Correct fix requires reverting that path and patching a different location.",
+  "input": "Repair the bug and make the full test suite pass.",
+  "allowed_tools": ["shell", "code_edit", "test_runner"],
+  "success_criteria": [
+    "Wrong patch is abandoned or reverted",
+    "Correct final patch is applied",
+    "Full suite passes"
+  ],
+  "common_failure_types": [
+    "sticks to wrong patch",
+    "accumulates patch-on-patch noise",
+    "partial pass mistaken for success"
+  ]
+}

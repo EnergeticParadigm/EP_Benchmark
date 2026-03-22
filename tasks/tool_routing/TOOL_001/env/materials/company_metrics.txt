@@ -1,0 +1,8 @@
+Quarterly Operations Snapshot
+
+Region A completed orders: 184
+Region B completed orders: 46
+
+Instruction:
+Compute Region B as a percentage of Region A.
+Return the final ratio with exactly two decimal places and a trailing percent sign.

@@ -1,0 +1,8 @@
+{
+  "tool_sequence": [
+    "retrieval_a",
+    "retrieval_b"
+  ],
+  "final_answer": "May 2023",
+  "evidence_snippet": "Polaris Edge became generally available in May 2023 after the controlled rollout concluded in April."
+}

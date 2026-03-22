@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_021",
+  "task_group": "tool_routing",
+  "mode": "baseline",
+  "model_name": "TOOL_021_BASELINE",
+  "success": false,
+  "final_output": "{\"tool_sequence\": [\"calculator\", \"retrieval\"], \"final_answer\": \"0.00 GB\"}",
+  "step_count": 1,
+  "tool_call_count": 2,
+  "invalid_tool_call_count": 1,
+  "token_count": 0,
+  "runtime_seconds": 0.0207,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "wrong_tool",
+  "notes": "TOOL_021 baseline used the wrong tool order."
+}

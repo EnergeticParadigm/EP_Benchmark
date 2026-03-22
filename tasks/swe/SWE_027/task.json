@@ -1,0 +1,23 @@
+{
+  "task_id": "SWE_027",
+  "task_group": "swe",
+  "title": "Rollback wrong regex patch",
+  "purpose": "Test recovery from superficially plausible but incorrect parsing fix.",
+  "setup": "A broad regex patch passes one case but fails the suite. Correct fix is narrower.",
+  "input": "Repair parser behavior and pass full test suite.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Wrong patch abandoned",
+    "Correct parser fix applied",
+    "Tests pass"
+  ],
+  "common_failure_types": [
+    "overbroad regex remains",
+    "partial pass mistaken for success",
+    "patch stacking"
+  ]
+}

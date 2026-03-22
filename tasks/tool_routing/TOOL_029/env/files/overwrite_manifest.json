@@ -1,0 +1,6 @@
+{
+  "targets": [
+    {"path": "files/service_config.yaml", "overwrite": true},
+    {"path": "files/readme.txt", "overwrite": false}
+  ]
+}

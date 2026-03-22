@@ -1,0 +1,5 @@
+{
+  "failing_test_name": "tests/test_profile.py::test_profile_avatar_warning",
+  "error_type": "WARNING",
+  "first_stacktrace_file_path": "tests/test_profile.py:14"
+}

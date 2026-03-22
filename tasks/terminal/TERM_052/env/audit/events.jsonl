@@ -1,0 +1,5 @@
+{"actor":"alice","status":"ok","severity":"low","ts":"2026-03-11T08:01:00Z","critical":false}
+{"actor":"bob","status":"failed","severity":"medium","ts":"2026-03-11T08:02:00Z","critical":false}
+{"actor":"alice","status":"failed","severity":"high","ts":"2026-03-11T08:03:00Z","critical":true,"event":"db-lock"}
+{"actor":"carl","status":"ok","severity":"low","ts":"2026-03-11T08:04:00Z","critical":false}
+{"actor":"dina","status":"failed","severity":"critical","ts":"2026-03-11T08:05:00Z","critical":true,"event":"token-breach"}

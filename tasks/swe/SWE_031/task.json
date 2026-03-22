@@ -1,0 +1,22 @@
+{
+  "task_id": "SWE_031",
+  "task_group": "swe",
+  "title": "Repair stale cache path",
+  "purpose": "Test source-level fix instead of patching around stale cache symptoms.",
+  "setup": "Bug appears as stale cache output but root issue is key construction.",
+  "input": "Fix source implementation so tests pass.",
+  "allowed_tools": [
+    "shell",
+    "code_edit",
+    "test_runner"
+  ],
+  "success_criteria": [
+    "Root fix applied",
+    "Tests pass"
+  ],
+  "common_failure_types": [
+    "cache clear workaround",
+    "caller-side patch",
+    "incomplete fix"
+  ]
+}

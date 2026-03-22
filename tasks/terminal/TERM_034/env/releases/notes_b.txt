@@ -1,0 +1,4 @@
+R7 bugfix retry counter fixed
+R7 bugfix session leak removed
+R6 security old openssl warning
+R7 docs release banner revised

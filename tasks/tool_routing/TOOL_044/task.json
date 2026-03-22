@@ -1,0 +1,23 @@
+{
+  "task_id": "TOOL_044",
+  "task_group": "tool_routing",
+  "title": "Recompute after route change",
+  "purpose": "Test whether system recomputes final answer after route switch instead of reusing stale intermediate state.",
+  "setup": "First route yields stale numeric value. Second route yields corrected value.",
+  "input": "Return corrected final answer and full tool sequence.",
+  "allowed_tools": [
+    "retrieval_a",
+    "retrieval_b",
+    "calculator"
+  ],
+  "success_criteria": [
+    "Correct reroute",
+    "Correct recomputation",
+    "Correct tool sequence"
+  ],
+  "common_failure_types": [
+    "stale reuse",
+    "reroute without recompute",
+    "wrong final answer"
+  ]
+}

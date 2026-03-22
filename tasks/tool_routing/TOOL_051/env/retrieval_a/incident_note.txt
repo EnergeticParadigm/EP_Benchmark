@@ -1,0 +1,5 @@
+Initial incident note
+
+Region candidate: west
+Confidence: low
+This first route is incomplete and should not be trusted as final.

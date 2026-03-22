@@ -1,0 +1,7 @@
+Storage status note
+
+Primary snapshot size: 5120 MB
+
+Instruction:
+Convert the size to GB using 1024 MB = 1 GB.
+Return exactly two decimals and the tool sequence used.

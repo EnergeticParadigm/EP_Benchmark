@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+.venv/
+venv/
+.python-version
+
+tasks/**/key/
+runner/*.bak*
+results/raw/
+
+DO_NOT_PUSH.txt
+PUSH_FILES.txt
+REDACT_FIRST.txt

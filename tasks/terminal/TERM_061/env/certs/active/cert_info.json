@@ -1,0 +1,5 @@
+{
+  "cert_path": "certs/active/server_live.crt",
+  "key_path": "certs/active/server_live.key",
+  "expiry_date": "2027-03-15"
+}

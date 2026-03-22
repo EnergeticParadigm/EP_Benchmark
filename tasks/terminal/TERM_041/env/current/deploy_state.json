@@ -1,0 +1,5 @@
+{
+  "deployment_target": "green-cluster",
+  "build_number": "9107",
+  "active_environment": "production"
+}

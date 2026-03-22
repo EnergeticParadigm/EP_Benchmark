@@ -1,0 +1,4 @@
+Route A result
+base_count=80
+multiplier=2
+status=stale

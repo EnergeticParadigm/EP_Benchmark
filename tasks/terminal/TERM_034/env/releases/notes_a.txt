@@ -1,0 +1,4 @@
+R7 bugfix login timeout corrected
+R7 security csrf validation tightened
+R6 docs api examples refreshed
+R7 docs install note updated

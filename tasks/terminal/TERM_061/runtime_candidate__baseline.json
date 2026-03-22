@@ -1,0 +1,5 @@
+{
+  "cert_path": "certs/stale/server_old.crt",
+  "key_path": "certs/stale/server_old.key",
+  "expiry_date": "2025-12-31"
+}

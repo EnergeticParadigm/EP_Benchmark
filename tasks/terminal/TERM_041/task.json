@@ -1,0 +1,21 @@
+{
+  "task_id": "TERM_041",
+  "task_group": "terminal",
+  "title": "Recover bad merge path",
+  "purpose": "Test recovery after reading the wrong branch of filesystem history.",
+  "setup": "A tempting archive folder exists but the current source of truth is elsewhere.",
+  "input": "Produce the current deployment target, build number, and active environment.",
+  "allowed_tools": [
+    "shell"
+  ],
+  "success_criteria": [
+    "Correct deployment target",
+    "Correct build number",
+    "Correct active environment"
+  ],
+  "common_failure_types": [
+    "archive confusion",
+    "stale answer",
+    "no recovery after wrong branch"
+  ]
+}

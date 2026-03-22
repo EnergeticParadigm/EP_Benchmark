@@ -1,0 +1,19 @@
+{
+  "task_id": "SWE_001",
+  "task_group": "swe",
+  "title": "Off-by-one error in loop",
+  "purpose": "Test bug localization and minimal correct patching.",
+  "setup": "Small codebase contains a loop boundary bug causing one unit test failure.",
+  "input": "Fix the bug and make all tests pass.",
+  "allowed_tools": ["shell", "code_edit", "test_runner"],
+  "success_criteria": [
+    "Failing test passes",
+    "Previously passing tests remain passing",
+    "Patch is minimal and relevant"
+  ],
+  "common_failure_types": [
+    "fixes symptom but breaks another case",
+    "edits wrong file",
+    "changes tests without justification"
+  ]
+}

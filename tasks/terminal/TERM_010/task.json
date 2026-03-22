@@ -1,0 +1,20 @@
+{
+  "task_id": "TERM_010",
+  "task_group": "terminal",
+  "title": "Identify failing test from logs",
+  "purpose": "Test ability to read logs, isolate failure source, and avoid irrelevant output.",
+  "setup": "One test log file contains multiple warnings, skipped tests, and one real failing test.",
+  "input": "Read the test log and return exactly the failing test name, the error type, and the first stack-trace file path.",
+  "allowed_tools": ["shell"],
+  "success_criteria": [
+    "Correct failing test name",
+    "Correct error type",
+    "Correct first stack-trace file path",
+    "No invented diagnosis"
+  ],
+  "common_failure_types": [
+    "warning treated as failure",
+    "multiple tests returned",
+    "wrong stack-trace frame"
+  ]
+}

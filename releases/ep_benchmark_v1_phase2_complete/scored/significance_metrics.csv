@@ -1,0 +1,4 @@
+comparison,task_count,a_only,b_only,both_success,both_fail,exact_sign_pvalue,effect_direction
+baseline vs baseline_scaffold,32,0,14,14,4,0.000122,baseline_scaffold
+baseline vs ep,32,0,17,14,1,1.5e-05,ep
+baseline_scaffold vs ep,32,0,3,28,1,0.25,ep

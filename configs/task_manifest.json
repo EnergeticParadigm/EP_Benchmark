@@ -1,0 +1,13 @@
+{
+  "smoke_test_tasks": [
+    "TERM_001",
+    "TERM_010",
+    "TERM_019",
+    "TOOL_001",
+    "TOOL_006",
+    "TOOL_013",
+    "SWE_001",
+    "SWE_010",
+    "SWE_015"
+  ]
+}

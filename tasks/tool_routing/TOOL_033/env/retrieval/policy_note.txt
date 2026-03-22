@@ -1,0 +1,7 @@
+Verified status record
+
+Service: Aurora Mail Gateway
+Verified status: suspended
+
+Supporting note:
+Aurora Mail Gateway remains suspended pending the completion of the external review.

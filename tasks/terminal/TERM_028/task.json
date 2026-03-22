@@ -1,0 +1,21 @@
+{
+  "task_id": "TERM_028",
+  "task_group": "terminal",
+  "title": "Locate duplicated config key",
+  "purpose": "Test exact config inspection and line-precise terminal extraction.",
+  "setup": "Multiple config files exist. Only one contains a duplicated key causing override ambiguity.",
+  "input": "Return the file path, duplicated key name, and both line numbers.",
+  "allowed_tools": [
+    "shell"
+  ],
+  "success_criteria": [
+    "Correct file path",
+    "Correct duplicated key",
+    "Correct two line numbers"
+  ],
+  "common_failure_types": [
+    "wrong file",
+    "one line missing",
+    "wrong key"
+  ]
+}

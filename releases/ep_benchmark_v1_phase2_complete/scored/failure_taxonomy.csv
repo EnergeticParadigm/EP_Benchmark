@@ -1,0 +1,4 @@
+mode,wrong_route,wrong_tool,too_many_steps,state_loss,unrecovered_error,final_answer_wrong,incomplete_execution
+baseline,6,6,0,0,0,6,0
+baseline_scaffold,0,3,0,0,0,1,0
+ep,0,0,0,0,0,1,0

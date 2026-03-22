@@ -1,0 +1,8 @@
+{
+  "tool_sequence": [
+    "retrieval_a",
+    "retrieval_b"
+  ],
+  "final_answer": "east|12",
+  "evidence_snippet": "The verified recovery report confirms that the outage was isolated to the east region and affected 12 nodes."
+}

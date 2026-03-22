@@ -1,0 +1,29 @@
+{
+  "required_fields": [
+    "task_id",
+    "task_group",
+    "mode",
+    "model_name",
+    "success",
+    "final_output",
+    "step_count",
+    "tool_call_count",
+    "invalid_tool_call_count",
+    "token_count",
+    "runtime_seconds",
+    "checkpoint_count",
+    "rollback_count",
+    "route_change_count",
+    "failure_class",
+    "notes"
+  ],
+  "failure_classes": [
+    "wrong_route",
+    "wrong_tool",
+    "too_many_steps",
+    "state_loss",
+    "unrecovered_error",
+    "final_answer_wrong",
+    "incomplete_execution"
+  ]
+}

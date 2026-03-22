@@ -1,0 +1,4 @@
+2026-03-01T10:11:02Z INFO req-11A2 health check ok
+2026-03-01T10:11:05Z WARN req-77A8 upstream latency elevated
+2026-03-01T10:11:09Z ERROR 502 req-77A9 upstream timeout while calling profile-service
+2026-03-01T10:11:11Z INFO req-11A3 retry succeeded

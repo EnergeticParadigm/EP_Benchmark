@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_033",
+  "task_group": "tool_routing",
+  "mode": "baseline",
+  "model_name": "TOOL_033_BASELINE",
+  "success": false,
+  "final_output": "{\"tool_sequence\": [\"direct_answer\"], \"final_answer\": \"active\"}",
+  "step_count": 1,
+  "tool_call_count": 1,
+  "invalid_tool_call_count": 1,
+  "token_count": 0,
+  "runtime_seconds": 0.0201,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "wrong_tool",
+  "notes": "TOOL_033 baseline used an unsafe direct shortcut."
+}

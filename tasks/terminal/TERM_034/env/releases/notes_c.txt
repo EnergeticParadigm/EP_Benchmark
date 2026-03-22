@@ -1,0 +1,4 @@
+R7 security token rotation hardened
+R7 bugfix audit serializer repaired
+R7 docs operator note added
+R6 bugfix deprecated test cleanup

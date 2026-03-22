@@ -1,0 +1,7 @@
+{
+  "tool_sequence": [
+    "retrieval_a",
+    "calculator"
+  ],
+  "final_answer": "160"
+}

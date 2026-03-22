@@ -1,0 +1,23 @@
+{
+  "task_id": "TOOL_024",
+  "task_group": "tool_routing",
+  "title": "Fallback source verification",
+  "purpose": "Test source fallback after first evidence source is incomplete.",
+  "setup": "Primary source omits the exact confirmation line. Secondary source contains the verified statement.",
+  "input": "Return the verified answer and one supporting snippet.",
+  "allowed_tools": [
+    "retrieval_a",
+    "retrieval_b",
+    "direct_answer"
+  ],
+  "success_criteria": [
+    "Correct reroute",
+    "Correct answer",
+    "Correct evidence snippet"
+  ],
+  "common_failure_types": [
+    "stays on incomplete source",
+    "unsupported answer",
+    "wrong snippet"
+  ]
+}

@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform darwin -- Python 3.11.7
+collected 8 items
+
+tests/test_auth.py::test_login_ok PASSED
+tests/test_auth.py::test_logout_ok PASSED
+tests/test_profile.py::test_profile_summary PASSED
+tests/test_profile.py::test_profile_avatar_warning WARNING low disk cache
+tests/test_orders.py::test_order_list PASSED
+tests/test_orders.py::test_order_total FAILED
+tests/test_orders.py::test_order_archive SKIPPED
+tests/test_health.py::test_healthcheck PASSED
+
+___________________________________ FAILURES ___________________________________
+
+________________________ test_order_total ________________________
+
+    def test_order_total():
+        items = [{"price": 19.5}, {"price": 20.0}]
+>       assert compute_total(items) == 39.5
+E       TypeError: unsupported operand type(s) for +: 'float' and 'str'
+
+app/orders/calc.py:27: TypeError
+
+=========================== short test summary info ===========================
+FAILED tests/test_orders.py::test_order_total - TypeError: unsupported operand type(s) for +: 'float' and 'str'
+============= 1 failed, 6 passed, 1 skipped, 1 warning in 0.82s =============

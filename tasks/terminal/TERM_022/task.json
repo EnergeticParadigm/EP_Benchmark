@@ -1,0 +1,21 @@
+{
+  "task_id": "TERM_022",
+  "task_group": "terminal",
+  "title": "Extract crash window",
+  "purpose": "Test multi-line terminal log narrowing across overlapping timestamps.",
+  "setup": "Several logs contain nearby timestamps. Only one five-line window corresponds to the crash interval.",
+  "input": "Return the start timestamp, end timestamp, and exact crash component name.",
+  "allowed_tools": [
+    "shell"
+  ],
+  "success_criteria": [
+    "Correct start timestamp",
+    "Correct end timestamp",
+    "Correct crash component"
+  ],
+  "common_failure_types": [
+    "wrong time window",
+    "wrong component",
+    "partial extraction"
+  ]
+}

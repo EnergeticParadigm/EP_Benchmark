@@ -1,0 +1,5 @@
+{
+  "deployment_target": "blue-cluster",
+  "build_number": "8841",
+  "active_environment": "staging"
+}

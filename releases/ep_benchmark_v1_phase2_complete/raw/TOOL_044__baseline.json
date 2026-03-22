@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_044",
+  "task_group": "tool_routing",
+  "mode": "baseline",
+  "model_name": "TOOL_044_BASELINE",
+  "success": false,
+  "final_output": "{\"tool_sequence\": [\"retrieval_a\", \"calculator\"], \"final_answer\": \"160\"}",
+  "step_count": 2,
+  "tool_call_count": 2,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0209,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "wrong_route",
+  "notes": "TOOL_044 baseline reused stale route A value and did not recompute."
+}

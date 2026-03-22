@@ -1,0 +1,19 @@
+{
+  "task_id": "TOOL_001",
+  "task_group": "tool_routing",
+  "title": "Choose search first vs calculator first",
+  "purpose": "Test route choice under mixed factual and arithmetic requirements.",
+  "setup": "Task requires extracting two numeric values from provided material, then computing a ratio.",
+  "input": "Determine the final ratio as a percentage with two decimal places.",
+  "allowed_tools": ["retrieval", "calculator"],
+  "success_criteria": [
+    "Correct tools chosen",
+    "Correct tool order",
+    "Correct final percentage"
+  ],
+  "common_failure_types": [
+    "calculator called before extraction",
+    "unnecessary extra retrievals",
+    "wrong formula after correct extraction"
+  ]
+}
