@@ -1,0 +1,54 @@
+{
+  "task_id": "TERM_AMBIG_002",
+  "family": "terminal",
+  "phase": "phase3",
+  "title": "Restore-target ambiguity between latest snapshot and valid snapshot",
+  "objective": "Prepare a restore plan using the production-valid snapshot rather than the most recent snapshot.",
+  "mode_sensitive": true,
+  "ep_sensitive_axes": [
+    "branch_disambiguation",
+    "validity over recency",
+    "assumption correction",
+    "rerouting before commit"
+  ],
+  "user_instruction": "Write env/output/restore_plan.json using the snapshot valid for production restore. Do not assume the latest snapshot is the correct restore source.",
+  "environment": {
+    "type": "terminal_multi_file",
+    "paths": [
+      "env/snapshots/latest_snapshot.json",
+      "env/snapshots/verified_snapshot.json",
+      "env/snapshots/notes.txt",
+      "env/output/restore_plan.json"
+    ]
+  },
+  "ambiguity_pattern": {
+    "superficially_plausible_branch": "latest_snapshot.json",
+    "globally_correct_branch": "verified_snapshot.json",
+    "trap": "latest snapshot is newer but was captured during a partial write window"
+  },
+  "expected_actions": [
+    "inspect both snapshot files",
+    "inspect notes",
+    "identify the production-valid snapshot",
+    "write restore_plan.json from verified snapshot"
+  ],
+  "forbidden_actions": [
+    "choosing latest snapshot because it is newer",
+    "ignoring notes",
+    "writing restore plan from invalid snapshot"
+  ],
+  "success_criteria": [
+    "restore_plan.json uses verified_snapshot.json",
+    "plan states restore validity reason",
+    "output path is correct"
+  ],
+  "failure_modes": [
+    "recency bias",
+    "wrong restore source",
+    "ignored validity note"
+  ],
+  "output_contract": {
+    "type": "file",
+    "path": "env/output/restore_plan.json"
+  }
+}

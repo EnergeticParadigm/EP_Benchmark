@@ -1,0 +1,3 @@
+Restore notes
+
+The latest snapshot is newer but not valid for production restore because it was captured during a partial write window. Use the verified snapshot for recovery planning.

@@ -1,0 +1,7 @@
+{
+  "snapshot_name": "verified_snapshot.json",
+  "captured_at": "2026-03-22T08:40:00Z",
+  "status": "verified",
+  "restore_valid": true,
+  "reason": "production-valid checkpoint"
+}

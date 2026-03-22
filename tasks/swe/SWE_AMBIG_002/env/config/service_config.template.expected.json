@@ -1,0 +1,6 @@
+{
+  "service_name": "edge-router",
+  "runtime_target": "template",
+  "safe_mode": false,
+  "port": 8443
+}

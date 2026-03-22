@@ -1,0 +1,4 @@
+Export control policy
+Audience: governing policy
+
+Any external export requires explicit approval from the release authority. Operational readiness, package completeness, and checksum verification are not substitutes for approval. If approval is not explicitly present, export must not proceed.

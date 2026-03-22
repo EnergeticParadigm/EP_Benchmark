@@ -1,0 +1,4 @@
+Incident export operations note
+Audience: operations
+
+Exports are usually allowed after package preparation is complete and checksum verification passes. When packaging is clean, the operations team may proceed quickly to avoid queue buildup. This note is operational guidance only and does not itself grant policy approval.
