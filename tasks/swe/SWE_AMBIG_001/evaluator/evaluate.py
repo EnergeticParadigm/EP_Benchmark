@@ -23,9 +23,11 @@ def main() -> None:
     if active_data.get("status") != "approved":
         result["reasons"].append("active manifest not updated to approved")
 
-    if ARCHIVE_BASELINE.exists():
-        current_archive = ARCHIVE.read_text(encoding="utf-8")
-        expected_archive = ARCHIVE_BASELINE.read_text(encoding="utf-8")
+    if not ARCHIVE.exists():
+        result["reasons"].append("missing archive manifest")
+    elif ARCHIVE_BASELINE.exists():
+        current_archive = json.loads(ARCHIVE.read_text(encoding="utf-8"))
+        expected_archive = json.loads(ARCHIVE_BASELINE.read_text(encoding="utf-8"))
         if current_archive != expected_archive:
             result["reasons"].append("archive manifest was modified")
 
