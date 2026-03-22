@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List
 
-BASE = Path("/Users/wesleyshu/ep_benchmark_v1")
+BASE = Path(__file__).resolve().parents[1]
 TASKS_DIR = BASE / "tasks"
 RESULTS_RAW_DIR = BASE / "results" / "raw"
 
