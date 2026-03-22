@@ -1,0 +1,8 @@
+{
+  "phase": "phase3",
+  "tasks": [
+    "TOOL_AMBIG_001",
+    "TERM_AMBIG_001",
+    "SWE_AMBIG_001"
+  ]
+}

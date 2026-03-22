@@ -1,0 +1,17 @@
+{
+  "phase": "phase3",
+  "task_paths": {
+    "TOOL_AMBIG_001": {
+      "family": "tool_routing",
+      "path": "tasks/tool_routing/TOOL_AMBIG_001"
+    },
+    "TERM_AMBIG_001": {
+      "family": "terminal",
+      "path": "tasks/terminal/TERM_AMBIG_001"
+    },
+    "SWE_AMBIG_001": {
+      "family": "swe",
+      "path": "tasks/swe/SWE_AMBIG_001"
+    }
+  }
+}

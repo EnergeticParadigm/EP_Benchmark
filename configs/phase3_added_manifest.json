@@ -1,0 +1,9 @@
+{
+  "phase3_added_tasks": [
+    "TOOL_AMBIG_001",
+    "TERM_AMBIG_001",
+    "SWE_AMBIG_001"
+  ],
+  "phase3_total_added": 3,
+  "phase3_family_focus": "branch_ambiguity"
+}
