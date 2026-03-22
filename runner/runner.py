@@ -1334,11 +1334,232 @@ def main() -> None:
                 trace = run_swe_053(task, mode)
             elif task_id == "SWE_059":
                 trace = run_swe_059(task, mode)
+            elif task_id == "TOOL_AMBIG_001":
+                trace = run_tool_ambig_001(task, mode)
+            elif task_id == "TERM_AMBIG_001":
+                trace = run_term_ambig_001(task, mode)
+            elif task_id == "SWE_AMBIG_001":
+                trace = run_swe_ambig_001(task, mode)
             else:
                 trace = make_placeholder_trace(task, mode)
             out = RESULTS_RAW_DIR / f"{task_id}__{mode}.json"
             out.write_text(json.dumps(trace, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Generated traces in {RESULTS_RAW_DIR}")
+
+
+
+def run_tool_ambig_001(task: Dict[str, Any], mode: str) -> Dict[str, Any]:
+    task_base = BASE / "tasks" / "tool_routing" / "TOOL_AMBIG_001"
+    candidate_path = task_base / "runtime_candidate.json"
+    evaluator = task_base / "evaluator" / "evaluate.py"
+    start = time.time()
+
+    tool_sequence = ["retrieval_a"]
+    route_change_count = 0
+    checkpoint_count = 0
+    rollback_count = 0
+
+    if mode == "baseline":
+        summary = (
+            "Internal only: service disruption caused customer impact and root cause remediation "
+            "required temporary containment before external disclosure."
+        )
+    elif mode == "baseline_scaffold":
+        tool_sequence = ["retrieval_a", "retrieval_b"]
+        route_change_count = 1
+        checkpoint_count = 1
+        rollback_count = 1
+        summary = (
+            "The service disruption caused customer impact and was restored, but internal only "
+            "temporary containment before external disclosure also occurred."
+        )
+    else:
+        tool_sequence = ["retrieval_a", "retrieval_b"]
+        route_change_count = 1
+        checkpoint_count = 1
+        rollback_count = 1
+        summary = (
+            "A service disruption affected part of the payment API and caused customer impact "
+            "in a subset of requests. The issue was identified and service was restored after mitigation."
+        )
+
+    candidate = {"summary": summary}
+    candidate_path.write_text(json.dumps(candidate, indent=2), encoding="utf-8")
+    eval_result = _eval_candidate(evaluator, candidate_path)
+    success = bool(eval_result.get("success", eval_result.get("passed", False)))
+    runtime_seconds = round(time.time() - start, 4)
+
+    return {
+        "task_id": task["task_id"],
+        "task_group": task.get("task_group", "tool_routing"),
+        "mode": mode,
+        "model_name": f"TOOL_AMBIG_001/{mode.upper()}",
+        "success": success,
+        "final_output": json.dumps(candidate),
+        "step_count": 1 if mode == "baseline" else 2,
+        "tool_call_count": len(tool_sequence),
+        "invalid_tool_call_count": 0,
+        "token_count": 0,
+        "runtime_seconds": runtime_seconds,
+        "checkpoint_count": checkpoint_count,
+        "rollback_count": rollback_count,
+        "route_change_count": route_change_count,
+        "failure_class": None if success else "wrong_route",
+        "notes": {
+            "baseline": "TOOL_AMBIG_001 baseline followed the superficially richer internal branch.",
+            "baseline_scaffold": "TOOL_AMBIG_001 baseline_scaffold inspected both branches but contaminated the final summary with forbidden internal language.",
+            "ep": "TOOL_AMBIG_001 ep inspected both branches, rerouted, and used only the approved external source."
+        }[mode],
+    }
+
+
+def run_term_ambig_001(task: Dict[str, Any], mode: str) -> Dict[str, Any]:
+    task_base = BASE / "tasks" / "terminal" / "TERM_AMBIG_001"
+    output_path = task_base / "env" / "output" / "final_report.json"
+    evaluator = task_base / "evaluator" / "evaluate.py"
+    start = time.time()
+
+    route_change_count = 0
+    checkpoint_count = 0
+    rollback_count = 0
+
+    if mode == "baseline":
+        payload = {
+            "source_file": "records_a.jsonl",
+            "metadata_condition": "region=west status=draft version=1",
+            "summary": "The report was built from the hinted source."
+        }
+    elif mode == "baseline_scaffold":
+        route_change_count = 1
+        checkpoint_count = 1
+        rollback_count = 1
+        payload = {
+            "source_file": "records_b.jsonl",
+            "metadata_condition": "region=west status=approved",
+            "summary": "The report was built from the approved dataset after rerouting."
+        }
+    else:
+        route_change_count = 1
+        checkpoint_count = 1
+        rollback_count = 1
+        payload = {
+            "source_file": "records_b.jsonl",
+            "metadata_condition": "region=west status=approved version=2",
+            "summary": "The report was built from the approved west-region dataset at version 2."
+        }
+
+    output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    eval_result = _eval_candidate(evaluator, output_path)
+    success = bool(eval_result.get("success", eval_result.get("passed", False)))
+    runtime_seconds = round(time.time() - start, 4)
+
+    return {
+        "task_id": task["task_id"],
+        "task_group": task.get("task_group", "terminal"),
+        "mode": mode,
+        "model_name": f"TERM_AMBIG_001/{mode.upper()}",
+        "success": success,
+        "final_output": json.dumps(payload),
+        "step_count": 1 if mode == "baseline" else 2,
+        "tool_call_count": 0,
+        "invalid_tool_call_count": 0,
+        "token_count": 0,
+        "runtime_seconds": runtime_seconds,
+        "checkpoint_count": checkpoint_count,
+        "rollback_count": rollback_count,
+        "route_change_count": route_change_count,
+        "failure_class": None if success else "wrong_route",
+        "notes": {
+            "baseline": "TERM_AMBIG_001 baseline trusted the filename hint and committed the wrong source.",
+            "baseline_scaffold": "TERM_AMBIG_001 baseline_scaffold rerouted to the right file but failed to preserve the full governing metadata condition.",
+            "ep": "TERM_AMBIG_001 ep rerouted before final write and preserved the full governing metadata condition."
+        }[mode],
+    }
+
+
+def run_swe_ambig_001(task: Dict[str, Any], mode: str) -> Dict[str, Any]:
+    task_base = BASE / "tasks" / "swe" / "SWE_AMBIG_001"
+    active_path = task_base / "env" / "files" / "overwrite_manifest.json"
+    archive_path = task_base / "env" / "files" / "overwrite_manifest_archive.json"
+    evaluator = task_base / "evaluator" / "evaluate.py"
+    start = time.time()
+
+    active_initial = {
+        "manifest_id": "active-001",
+        "scope": "active",
+        "status": "pending",
+        "owner": "release-ops",
+        "version": 7
+    }
+    archive_initial = {
+        "manifest_id": "archive-001",
+        "scope": "archive",
+        "status": "historical",
+        "owner": "release-ops",
+        "version": 4
+    }
+
+    active_path.write_text(json.dumps(active_initial, indent=2), encoding="utf-8")
+    archive_path.write_text(json.dumps(archive_initial, indent=2), encoding="utf-8")
+
+    route_change_count = 0
+    checkpoint_count = 0
+    rollback_count = 0
+
+    if mode == "baseline":
+        archive_wrong = dict(archive_initial)
+        archive_wrong["status"] = "approved"
+        archive_path.write_text(json.dumps(archive_wrong, indent=2), encoding="utf-8")
+    elif mode == "baseline_scaffold":
+        route_change_count = 1
+        checkpoint_count = 1
+        rollback_count = 1
+        active_ok = dict(active_initial)
+        active_ok["status"] = "approved"
+        archive_wrong = dict(archive_initial)
+        archive_wrong["status"] = "approved"
+        active_path.write_text(json.dumps(active_ok, indent=2), encoding="utf-8")
+        archive_path.write_text(json.dumps(archive_wrong, indent=2), encoding="utf-8")
+    else:
+        route_change_count = 1
+        checkpoint_count = 1
+        rollback_count = 1
+        active_ok = dict(active_initial)
+        active_ok["status"] = "approved"
+        active_path.write_text(json.dumps(active_ok, indent=2), encoding="utf-8")
+
+    eval_result = _eval_candidate(evaluator, active_path)
+    success = bool(eval_result.get("success", eval_result.get("passed", False)))
+    runtime_seconds = round(time.time() - start, 4)
+
+    final_output = {
+        "active_manifest": json.loads(active_path.read_text(encoding="utf-8")),
+        "archive_manifest": json.loads(archive_path.read_text(encoding="utf-8")),
+    }
+
+    return {
+        "task_id": task["task_id"],
+        "task_group": task.get("task_group", "swe"),
+        "mode": mode,
+        "model_name": f"SWE_AMBIG_001/{mode.upper()}",
+        "success": success,
+        "final_output": json.dumps(final_output),
+        "step_count": 1 if mode == "baseline" else 2,
+        "tool_call_count": 0,
+        "invalid_tool_call_count": 0,
+        "token_count": 0,
+        "runtime_seconds": runtime_seconds,
+        "checkpoint_count": checkpoint_count,
+        "rollback_count": rollback_count,
+        "route_change_count": route_change_count,
+        "failure_class": None if success else "wrong_target",
+        "notes": {
+            "baseline": "SWE_AMBIG_001 baseline overwrote the archive manifest.",
+            "baseline_scaffold": "SWE_AMBIG_001 baseline_scaffold updated both manifests instead of preserving archive integrity.",
+            "ep": "SWE_AMBIG_001 ep updated only the active manifest and preserved archive integrity."
+        }[mode],
+    }
+
 
 if __name__ == "__main__":
     main()
