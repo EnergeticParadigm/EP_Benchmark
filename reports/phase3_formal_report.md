@@ -1,5 +1,37 @@
 # Phase 3 Formal Report
 
+## Overview
+
+Phase 3 was designed to test a narrower and more discriminative benchmark question than the earlier phases. The purpose was not merely to show that a plain baseline fails. The purpose was to determine whether a scaffolded baseline can match EP on tasks where the system must distinguish between superficially richer branches and the branch that actually preserves the governing condition.
+
+The current Phase 3 report includes benchmark batches that are explicitly EP-sensitive. These tasks are designed so that the incorrect branch is not absurd or trivial. It is often more detailed, more locally plausible, or more immediately actionable. This makes the benchmark suitable for separating systems that merely add procedure from systems that can preserve the true governing condition under ambiguity.
+
+## Included Batches
+
+- [AMBIG_001 Batch](#ambig_001-batch)
+
+## Current Headline Result
+
+The strongest current Phase 3 result is a clean separation on the AMBIG_001 batch:
+
+- baseline: `0 / 3`
+- baseline_scaffold: `0 / 3`
+- ep: `3 / 3`
+
+This result shows that extra procedure alone did not solve branch ambiguity. The scaffolded baseline inspected more, and in some cases rerouted or checkpointed, but still failed to preserve the governing condition at the point of final selection. EP succeeded because it changed the routing decision itself.
+
+## Figure and Report Index
+
+### Batch Reports
+
+- `reports/phase3_ambig001_formal_report.md`
+
+### Figures
+
+- `results/figures/phase3_ambig001_overall_success.png`
+- `results/figures/phase3_ambig001_task_mode_outcomes.png`
+- `results/figures/phase3_ambig001_mechanism_split.png`
+
 ## Included Batches
 
 - [AMBIG_001 Batch](#ambig_001-batch)
