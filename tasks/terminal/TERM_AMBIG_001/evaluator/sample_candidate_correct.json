@@ -1,0 +1,5 @@
+{
+  "source_file": "records_b.jsonl",
+  "metadata_condition": "region=west status=approved version=2",
+  "summary": "The report was built from the approved west-region dataset at version 2."
+}

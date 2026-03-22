@@ -1,0 +1,5 @@
+{
+  "source_file": "records_a.jsonl",
+  "metadata_condition": "region=west status=draft version=1",
+  "summary": "The report was built from the draft dataset because the filename hint pointed there."
+}

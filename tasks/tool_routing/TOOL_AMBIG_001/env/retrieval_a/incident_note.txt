@@ -1,0 +1,14 @@
+Incident family: payment-api degradation
+Audience: internal only
+
+At 09:14 UTC the payment API experienced elevated latency and partial request failure. Customer impact began in the west region and later spread to central traffic due to queue spillover. Temporary containment was applied by reducing retry fanout and bypassing one enrichment stage.
+
+Internal-only remediation language:
+- internal only
+- root cause remediation
+- temporary containment before external disclosure
+- rollback of worker tuning
+- cache warmup exception path
+
+Additional internal details:
+Engineers traced the issue to an interaction between a new worker tuning profile and stale cache priming. A rollback of worker tuning reduced latency but this note is not approved for external reporting.

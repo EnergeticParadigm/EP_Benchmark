@@ -1,0 +1,55 @@
+{
+  "task_id": "TERM_AMBIG_001",
+  "family": "terminal",
+  "phase": "phase3",
+  "title": "Ambiguous source-file recovery before final write",
+  "objective": "Generate the final report from the correct source file when one hint points toward a plausible but wrong branch.",
+  "mode_sensitive": true,
+  "ep_sensitive_axes": [
+    "branch_disambiguation",
+    "assumption_validation",
+    "rerouting_before_commit",
+    "state_discipline"
+  ],
+  "user_instruction": "Build env/output/final_report.json from the correct input source. A filename hint is present, but the report must use the dataset that satisfies the governing metadata condition.",
+  "environment": {
+    "type": "terminal_multi_file",
+    "paths": [
+      "env/input/records_a.jsonl",
+      "env/input/records_b.jsonl",
+      "env/input/records_c.jsonl",
+      "env/input/wrong_path_hint.txt",
+      "env/output/final_report.json"
+    ]
+  },
+  "ambiguity_pattern": {
+    "superficially_plausible_branch": "records_a.jsonl",
+    "globally_correct_branch": "records_b.jsonl",
+    "trap": "hint and filename pattern favor records_a, but only records_b satisfies metadata constraint"
+  },
+  "expected_actions": [
+    "inspect candidate files",
+    "verify metadata constraint",
+    "choose correct source",
+    "write env/output/final_report.json exactly once"
+  ],
+  "forbidden_actions": [
+    "trusting filename hint without validation",
+    "writing final report from records_a",
+    "producing multiple final outputs"
+  ],
+  "success_criteria": [
+    "final report is derived from records_b",
+    "metadata condition is satisfied",
+    "output path is correct"
+  ],
+  "failure_modes": [
+    "wrong source selection",
+    "hint-following without verification",
+    "late realization after committed wrong output"
+  ],
+  "output_contract": {
+    "type": "file",
+    "path": "env/output/final_report.json"
+  }
+}

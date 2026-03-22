@@ -1,0 +1,22 @@
+{
+  "phase3_manifest_version": 1,
+  "phase": "phase3",
+  "family_focus": "branch_ambiguity",
+  "tasks": [
+    {
+      "task_id": "TOOL_AMBIG_001",
+      "family": "tool_routing",
+      "path": "tasks/tool_routing/TOOL_AMBIG_001"
+    },
+    {
+      "task_id": "TERM_AMBIG_001",
+      "family": "terminal",
+      "path": "tasks/terminal/TERM_AMBIG_001"
+    },
+    {
+      "task_id": "SWE_AMBIG_001",
+      "family": "swe",
+      "path": "tasks/swe/SWE_AMBIG_001"
+    }
+  ]
+}

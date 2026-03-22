@@ -1,0 +1,9 @@
+Incident family: payment-api degradation
+Audience: approved external reporting source
+
+At 09:14 UTC a service disruption affected part of the payment API and caused customer impact in a subset of requests. The issue was identified and service was restored after mitigation. No customer action was required after restoration.
+
+Approved external markers:
+- service disruption
+- customer impact
+- restored
