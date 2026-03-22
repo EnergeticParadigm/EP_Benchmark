@@ -1537,6 +1537,7 @@ def run_term_ambig_001(task: Dict[str, Any], mode: str) -> Dict[str, Any]:
             "summary": "The report was built from the approved west-region dataset at version 2."
         }
 
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     eval_result = _eval_candidate(evaluator, output_path)
     success = bool(eval_result.get("success", eval_result.get("passed", False)))
