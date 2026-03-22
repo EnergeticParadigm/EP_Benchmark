@@ -37,21 +37,109 @@ def make_placeholder_trace(task: Dict[str, Any], mode: str) -> Dict[str, Any]:
 
 def _eval_candidate(evaluator: Path, candidate_path: Path) -> Dict[str, Any]:
     proc = subprocess.run(
-        ["/usr/bin/python3", str(evaluator), str(candidate_path)],
+        [sys.executable, str(evaluator), str(candidate_path)],
         capture_output=True,
         text=True,
-        check=False,
+        cwd=str(evaluator.parent),
     )
-    return json.loads(proc.stdout)
+    stdout = (proc.stdout or "").strip()
+    stderr = (proc.stderr or "").strip()
+
+    if proc.returncode != 0:
+        return {
+            "success": False,
+            "passed": False,
+            "error": "evaluator_nonzero_exit",
+            "returncode": proc.returncode,
+            "stdout": stdout,
+            "stderr": stderr,
+        }
+
+    if not stdout:
+        return {
+            "success": False,
+            "passed": False,
+            "error": "evaluator_empty_stdout",
+            "returncode": proc.returncode,
+            "stdout": stdout,
+            "stderr": stderr,
+        }
+
+    try:
+        data = json.loads(stdout)
+    except Exception:
+        return {
+            "success": False,
+            "passed": False,
+            "error": "evaluator_invalid_json",
+            "returncode": proc.returncode,
+            "stdout": stdout,
+            "stderr": stderr,
+        }
+
+    if "success" not in data and "passed" not in data:
+        data["success"] = False
+        data["passed"] = False
+        data["error"] = "missing_success_flag"
+    elif "success" not in data and "passed" in data:
+        data["success"] = bool(data["passed"])
+    elif "passed" not in data and "success" in data:
+        data["passed"] = bool(data["success"])
+
+    return data
 
 def _eval_repo(evaluator: Path) -> Dict[str, Any]:
     proc = subprocess.run(
-        ["/usr/bin/python3", str(evaluator)],
+        [sys.executable, str(evaluator)],
         capture_output=True,
         text=True,
-        check=False,
+        cwd=str(evaluator.parent),
     )
-    return json.loads(proc.stdout)
+    stdout = (proc.stdout or "").strip()
+    stderr = (proc.stderr or "").strip()
+
+    if proc.returncode != 0:
+        return {
+            "success": False,
+            "passed": False,
+            "error": "evaluator_nonzero_exit",
+            "returncode": proc.returncode,
+            "stdout": stdout,
+            "stderr": stderr,
+        }
+
+    if not stdout:
+        return {
+            "success": False,
+            "passed": False,
+            "error": "evaluator_empty_stdout",
+            "returncode": proc.returncode,
+            "stdout": stdout,
+            "stderr": stderr,
+        }
+
+    try:
+        data = json.loads(stdout)
+    except Exception:
+        return {
+            "success": False,
+            "passed": False,
+            "error": "evaluator_invalid_json",
+            "returncode": proc.returncode,
+            "stdout": stdout,
+            "stderr": stderr,
+        }
+
+    if "success" not in data and "passed" not in data:
+        data["success"] = False
+        data["passed"] = False
+        data["error"] = "missing_success_flag"
+    elif "success" not in data and "passed" in data:
+        data["success"] = bool(data["passed"])
+    elif "passed" not in data and "success" in data:
+        data["passed"] = bool(data["success"])
+
+    return data
 
 def run_term_001(task: Dict[str, Any], mode: str) -> Dict[str, Any]:
     task_base = BASE / "tasks" / "terminal" / "TERM_001"
