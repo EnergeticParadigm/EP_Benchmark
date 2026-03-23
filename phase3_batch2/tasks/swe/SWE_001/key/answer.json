@@ -1,0 +1,6 @@
+{
+  "task_id": "SWE_001",
+  "expected_file": "app/range_sum.py",
+  "expected_required_snippet": "for i in range(n):",
+  "tests_command": "/usr/bin/python3 run_tests.py"
+}

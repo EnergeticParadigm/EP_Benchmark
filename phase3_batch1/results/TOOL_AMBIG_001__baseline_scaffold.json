@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_AMBIG_001",
+  "task_group": "tool_routing",
+  "mode": "baseline_scaffold",
+  "model_name": "TOOL_AMBIG_001/BASELINE_SCAFFOLD",
+  "success": false,
+  "final_output": "{\"summary\": \"The service disruption caused customer impact and was restored, but internal only temporary containment before external disclosure also occurred.\"}",
+  "step_count": 2,
+  "tool_call_count": 2,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0177,
+  "checkpoint_count": 1,
+  "rollback_count": 1,
+  "route_change_count": 1,
+  "failure_class": "wrong_route",
+  "notes": "TOOL_AMBIG_001 baseline_scaffold inspected both branches but contaminated the final summary with forbidden internal language."
+}

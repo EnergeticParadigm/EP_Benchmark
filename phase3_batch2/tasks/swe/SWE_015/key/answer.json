@@ -1,0 +1,6 @@
+{
+  "task_id": "SWE_015",
+  "expected_file": "app/score_utils.py",
+  "expected_required_snippet": "return clamp_score(value)",
+  "tests_command": "/usr/bin/python3 run_tests.py"
+}

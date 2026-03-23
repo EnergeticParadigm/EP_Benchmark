@@ -1,0 +1,6 @@
+{
+  "task_id": "TERM_052",
+  "expected_actor_count": 4,
+  "expected_failed_events": 3,
+  "expected_latest_critical_event": "token-breach"
+}

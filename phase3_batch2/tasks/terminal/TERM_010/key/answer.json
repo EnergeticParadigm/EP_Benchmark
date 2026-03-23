@@ -1,0 +1,6 @@
+{
+  "task_id": "TERM_010",
+  "expected_failing_test_name": "tests/test_orders.py::test_order_total",
+  "expected_error_type": "TypeError",
+  "expected_first_stacktrace_file_path": "app/orders/calc.py:27"
+}

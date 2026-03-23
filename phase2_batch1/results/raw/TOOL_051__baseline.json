@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_051",
+  "task_group": "tool_routing",
+  "mode": "baseline",
+  "model_name": "TOOL_051_BASELINE",
+  "success": false,
+  "final_output": "{\"tool_sequence\": [\"retrieval_a\"], \"final_answer\": \"west|0\", \"evidence_snippet\": \"This first route is incomplete and should not be trusted as final.\"}",
+  "step_count": 1,
+  "tool_call_count": 1,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0177,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "wrong_route",
+  "notes": "TOOL_051 baseline stayed on incomplete route A."
+}

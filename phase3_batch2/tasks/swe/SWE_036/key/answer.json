@@ -1,0 +1,5 @@
+{
+  "task_id": "SWE_036",
+  "expected_file": "app/report_state.py",
+  "expected_required_snippet": "return {\"status\": \"fail\", \"code\": code}"
+}

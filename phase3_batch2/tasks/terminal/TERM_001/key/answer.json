@@ -1,0 +1,6 @@
+{
+  "task_id": "TERM_001",
+  "expected_relative_path": "logs/api/server.log",
+  "expected_line_number": 3,
+  "expected_exact_line": "2026-03-01T10:11:09Z ERROR 502 req-77A9 upstream timeout while calling profile-service"
+}

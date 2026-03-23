@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_024",
+  "task_group": "tool_routing",
+  "mode": "baseline_scaffold",
+  "model_name": "TOOL_024_BASELINE_SCAFFOLD",
+  "success": false,
+  "final_output": "{\"tool_sequence\": [\"retrieval_a\", \"retrieval_b\"], \"final_answer\": \"May 2023\", \"evidence_snippet\": \"Polaris Edge became generally available in May 2023 after the controlled rollout concluded in April.\"}",
+  "step_count": 2,
+  "tool_call_count": 2,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0181,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 1,
+  "failure_class": "wrong_route",
+  "notes": "TOOL_024 baseline_scaffold rerouted to verified secondary source."
+}

@@ -1,0 +1,5 @@
+{
+  "task_id": "SWE_042",
+  "expected_file": "app/score_bridge.py",
+  "expected_required_snippet": "return clamp_percentage(value)"
+}

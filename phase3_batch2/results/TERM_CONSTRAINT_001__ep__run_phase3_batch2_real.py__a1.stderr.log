@@ -1,0 +1,2 @@
+usage: run_phase3_batch2_real.py [-h] [--manifest MANIFEST]
+run_phase3_batch2_real.py: error: unrecognized arguments: --task-id TERM_CONSTRAINT_001 --mode ep --output /Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/results/raw/TERM_CONSTRAINT_001__ep.json

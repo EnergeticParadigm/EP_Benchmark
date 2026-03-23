@@ -1,0 +1,5 @@
+{
+  "task_id": "TOOL_033",
+  "expected_tool_sequence": ["retrieval"],
+  "expected_final_answer": "suspended"
+}

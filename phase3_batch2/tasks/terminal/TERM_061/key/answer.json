@@ -1,0 +1,6 @@
+{
+  "task_id": "TERM_061",
+  "expected_cert_path": "certs/active/server_live.crt",
+  "expected_key_path": "certs/active/server_live.key",
+  "expected_expiry_date": "2027-03-15"
+}

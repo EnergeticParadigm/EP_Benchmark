@@ -1,0 +1,5 @@
+{
+  "task_id": "SWE_031",
+  "expected_file": "app/cache_key.py",
+  "expected_required_snippet": "return f\"{user_id}:{region}\""
+}

@@ -1,0 +1,71 @@
+=== FILE ===
+/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/scripts/run_phase3_only.py
+
+=== SEARCH: manifest / argparse / task_id / AMBIG / CONSTRAINT ===
+6:ROOT = Path("/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1")
+11:spec = importlib.util.spec_from_file_location("ep_runner_phase3", RUNNER_PATH)
+16:phase3_tasks = [
+17:    {"task_id": "TOOL_AMBIG_001", "task_group": "tool_routing"},
+18:    {"task_id": "TERM_AMBIG_001", "task_group": "terminal"},
+19:    {"task_id": "SWE_AMBIG_001", "task_group": "swe"},
+23:    "TOOL_AMBIG_001": runner.run_tool_ambig_001,
+24:    "TERM_AMBIG_001": runner.run_term_ambig_001,
+25:    "SWE_AMBIG_001": runner.run_swe_ambig_001,
+31:for task in phase3_tasks:
+32:    fn = dispatch[task["task_id"]]
+35:        out = RESULTS_RAW_DIR / f'{task["task_id"]}__{mode}.json'
+
+=== SEARCH: explicit old task ids ===
+17:    {"task_id": "TOOL_AMBIG_001", "task_group": "tool_routing"},
+18:    {"task_id": "TERM_AMBIG_001", "task_group": "terminal"},
+19:    {"task_id": "SWE_AMBIG_001", "task_group": "swe"},
+23:    "TOOL_AMBIG_001": runner.run_tool_ambig_001,
+24:    "TERM_AMBIG_001": runner.run_term_ambig_001,
+25:    "SWE_AMBIG_001": runner.run_swe_ambig_001,
+
+=== SEARCH: possible hard-coded lists ===
+16:phase3_tasks = [
+31:for task in phase3_tasks:
+
+=== FULL FILE WITH LINE NUMBERS ===
+     1	#!/usr/bin/env python3
+     2	import json
+     3	import importlib.util
+     4	from pathlib import Path
+     5	
+     6	ROOT = Path("/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1")
+     7	RUNNER_PATH = ROOT / "runner" / "runner.py"
+     8	RESULTS_RAW_DIR = ROOT / "results" / "raw"
+     9	RESULTS_RAW_DIR.mkdir(parents=True, exist_ok=True)
+    10	
+    11	spec = importlib.util.spec_from_file_location("ep_runner_phase3", RUNNER_PATH)
+    12	runner = importlib.util.module_from_spec(spec)
+    13	assert spec.loader is not None
+    14	spec.loader.exec_module(runner)
+    15	
+    16	phase3_tasks = [
+    17	    {"task_id": "TOOL_AMBIG_001", "task_group": "tool_routing"},
+    18	    {"task_id": "TERM_AMBIG_001", "task_group": "terminal"},
+    19	    {"task_id": "SWE_AMBIG_001", "task_group": "swe"},
+    20	]
+    21	
+    22	dispatch = {
+    23	    "TOOL_AMBIG_001": runner.run_tool_ambig_001,
+    24	    "TERM_AMBIG_001": runner.run_term_ambig_001,
+    25	    "SWE_AMBIG_001": runner.run_swe_ambig_001,
+    26	}
+    27	
+    28	modes = ["baseline", "baseline_scaffold", "ep"]
+    29	
+    30	written = []
+    31	for task in phase3_tasks:
+    32	    fn = dispatch[task["task_id"]]
+    33	    for mode in modes:
+    34	        trace = fn(task, mode)
+    35	        out = RESULTS_RAW_DIR / f'{task["task_id"]}__{mode}.json'
+    36	        out.write_text(json.dumps(trace, indent=2, ensure_ascii=False), encoding="utf-8")
+    37	        written.append(str(out))
+    38	
+    39	print("WROTE:")
+    40	for path in written:
+    41	    print(path)

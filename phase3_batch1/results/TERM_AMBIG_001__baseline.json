@@ -1,0 +1,18 @@
+{
+  "task_id": "TERM_AMBIG_001",
+  "task_group": "terminal",
+  "mode": "baseline",
+  "model_name": "TERM_AMBIG_001/BASELINE",
+  "success": false,
+  "final_output": "{\"source_file\": \"records_a.jsonl\", \"metadata_condition\": \"region=west status=draft version=1\", \"summary\": \"The report was built from the hinted source.\"}",
+  "step_count": 1,
+  "tool_call_count": 0,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0191,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "wrong_route",
+  "notes": "TERM_AMBIG_001 baseline trusted the filename hint and committed the wrong source."
+}

@@ -1,0 +1,5 @@
+{
+  "task_id": "SWE_048",
+  "expected_file": "app/first_record.py",
+  "expected_required_snippet": "return records[0] if records else None"
+}

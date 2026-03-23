@@ -1,0 +1,18 @@
+{
+  "task_id": "TERM_001",
+  "task_group": "terminal",
+  "mode": "baseline",
+  "model_name": "TERM_001_REAL_EXECUTION",
+  "success": false,
+  "final_output": "{\"relative_path\": \"logs/api/server.log\", \"line_number\": 3, \"exact_line\": \"2026-03-01T10:11:09Z ERROR 502 req-77A9 upstream timeout while calling profile-service\"}",
+  "step_count": 2,
+  "tool_call_count": 2,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0036,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "final_answer_wrong",
+  "notes": "TERM_001 executed by real grep search over env and then evaluated automatically."
+}

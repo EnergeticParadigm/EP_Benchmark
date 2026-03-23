@@ -1,0 +1,6 @@
+{
+  "task_id": "SWE_010",
+  "expected_file": "app/formatter.py",
+  "expected_required_snippet": "return {\"result\": value}",
+  "tests_command": "/usr/bin/python3 run_tests.py"
+}

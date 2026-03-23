@@ -1,0 +1,6 @@
+RUN_PHASE3_BATCH2_COMPARE_OK
+SUMMARY_JSON=/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/results/phase3_batch2_compare/phase3_batch2_compare_summary.json
+SUMMARY_MD=/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/results/phase3_batch2_compare/phase3_batch2_compare_summary.md
+BASELINE_TOTALS=pass:0,fail:3,partial:0,runner_error:0,unparsed:0,missing_evidence:0
+SCAFFOLD_TOTALS=pass:0,fail:0,partial:3,runner_error:0,unparsed:0,missing_evidence:0
+EP_TOTALS=pass:3,fail:0,partial:0,runner_error:0,unparsed:0,missing_evidence:0

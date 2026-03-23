@@ -1,0 +1,5 @@
+{
+  "task_id": "SWE_027",
+  "expected_file": "app/parser.py",
+  "expected_required_snippet": "r\"order-\\d+(?![A-Za-z0-9_])\""
+}

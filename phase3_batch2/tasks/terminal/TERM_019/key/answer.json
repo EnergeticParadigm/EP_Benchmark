@@ -1,0 +1,10 @@
+{
+  "task_id": "TERM_019",
+  "expected_output_path": "output/final_report.json",
+  "expected_json": {
+    "total_files": 3,
+    "valid_records": 6,
+    "invalid_records": 3,
+    "top_category": "alpha"
+  }
+}

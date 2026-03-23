@@ -1,0 +1,5 @@
+{
+  "task_id": "SWE_053",
+  "expected_file": "app/normalize_name.py",
+  "expected_required_snippet": "replace(\" \", \"_\")"
+}

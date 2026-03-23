@@ -1,0 +1,5 @@
+{
+  "task_id": "SWE_024",
+  "expected_file": "app/result_shape.py",
+  "expected_required_snippet": "return {\"count\": 0, \"items\": []}"
+}

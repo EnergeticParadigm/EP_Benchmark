@@ -1,0 +1,18 @@
+{
+  "task_id": "SWE_AMBIG_001",
+  "task_group": "swe",
+  "mode": "baseline_scaffold",
+  "model_name": "SWE_AMBIG_001/BASELINE_SCAFFOLD",
+  "success": false,
+  "final_output": "{\"active_manifest\": {\"manifest_id\": \"active-001\", \"scope\": \"active\", \"status\": \"approved\", \"owner\": \"release-ops\", \"version\": 7}, \"archive_manifest\": {\"manifest_id\": \"archive-001\", \"scope\": \"archive\", \"status\": \"approved\", \"owner\": \"release-ops\", \"version\": 4}}",
+  "step_count": 2,
+  "tool_call_count": 0,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0326,
+  "checkpoint_count": 1,
+  "rollback_count": 1,
+  "route_change_count": 1,
+  "failure_class": "wrong_target",
+  "notes": "SWE_AMBIG_001 baseline_scaffold updated both manifests instead of preserving archive integrity."
+}

@@ -1,0 +1,6 @@
+{
+  "task_id": "TOOL_058",
+  "expected_export_target": "files/customer_export.csv",
+  "expected_checkpoint_state": true,
+  "expected_final_export_status": "approved"
+}

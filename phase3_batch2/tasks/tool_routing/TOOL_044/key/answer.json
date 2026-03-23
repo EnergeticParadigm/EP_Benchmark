@@ -1,0 +1,5 @@
+{
+  "task_id": "TOOL_044",
+  "expected_tool_sequence": ["retrieval_a", "retrieval_b", "calculator"],
+  "expected_final_answer": "190"
+}

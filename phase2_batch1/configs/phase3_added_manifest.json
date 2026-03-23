@@ -1,0 +1,47 @@
+{
+  "phase3_added_tasks": [
+    "TOOL_AMBIG_001",
+    "TERM_AMBIG_001",
+    "SWE_AMBIG_001"
+  ],
+  "phase3_total_added": 3,
+  "phase3_family_focus": "branch_ambiguity",
+  "added_tasks": [
+    {
+      "task_id": "SWE_CONSTRAINT_001",
+      "track": "swe",
+      "phase": 3,
+      "batch": 2,
+      "task_folder": "phase3_batch2_swe_constraint_001",
+      "task_dir": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/swe/phase3_batch2_swe_constraint_001",
+      "task_spec": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/swe/phase3_batch2_swe_constraint_001/task.md",
+      "metadata": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/swe/phase3_batch2_swe_constraint_001/metadata.json",
+      "grader": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/swe/phase3_batch2_swe_constraint_001/grader.py",
+      "category": "constraint_preservation"
+    },
+    {
+      "task_id": "TERM_CONSTRAINT_001",
+      "track": "terminal",
+      "phase": 3,
+      "batch": 2,
+      "task_folder": "phase3_batch2_term_constraint_001",
+      "task_dir": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/terminal/phase3_batch2_term_constraint_001",
+      "task_spec": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/terminal/phase3_batch2_term_constraint_001/task.md",
+      "metadata": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/terminal/phase3_batch2_term_constraint_001/metadata.json",
+      "grader": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/terminal/phase3_batch2_term_constraint_001/grader.py",
+      "category": "constraint_preservation"
+    },
+    {
+      "task_id": "TOOL_CONSTRAINT_001",
+      "track": "tool_routing",
+      "phase": 3,
+      "batch": 2,
+      "task_folder": "phase3_batch2_tool_constraint_001",
+      "task_dir": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/tool_routing/phase3_batch2_tool_constraint_001",
+      "task_spec": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/tool_routing/phase3_batch2_tool_constraint_001/task.md",
+      "metadata": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/tool_routing/phase3_batch2_tool_constraint_001/metadata.json",
+      "grader": "/Users/wesleyshu/EnergeticParadigm/ep_benchmark_v1/tasks/tool_routing/phase3_batch2_tool_constraint_001/grader.py",
+      "category": "constraint_preservation"
+    }
+  ]
+}

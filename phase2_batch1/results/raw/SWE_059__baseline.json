@@ -1,0 +1,18 @@
+{
+  "task_id": "SWE_059",
+  "task_group": "swe",
+  "mode": "baseline",
+  "model_name": "SWE_059_BASELINE",
+  "success": false,
+  "final_output": "def score_label(score):\n    if score >= 80:\n        return \"gold\"\n    if score >= 50:\n        return \"silver\"\n    return \"silver\"\n",
+  "step_count": 2,
+  "tool_call_count": 2,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0252,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "final_answer_wrong",
+  "notes": "SWE_059 baseline returned the wrong low-score label."
+}

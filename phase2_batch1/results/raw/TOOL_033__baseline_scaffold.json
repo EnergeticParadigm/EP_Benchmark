@@ -1,0 +1,18 @@
+{
+  "task_id": "TOOL_033",
+  "task_group": "tool_routing",
+  "mode": "baseline_scaffold",
+  "model_name": "TOOL_033_BASELINE_SCAFFOLD",
+  "success": false,
+  "final_output": "{\"tool_sequence\": [\"retrieval\"], \"final_answer\": \"suspended\"}",
+  "step_count": 1,
+  "tool_call_count": 1,
+  "invalid_tool_call_count": 0,
+  "token_count": 0,
+  "runtime_seconds": 0.0171,
+  "checkpoint_count": 0,
+  "rollback_count": 0,
+  "route_change_count": 0,
+  "failure_class": "wrong_tool",
+  "notes": "TOOL_033 baseline_scaffold rejected the shortcut and used retrieval."
+}
