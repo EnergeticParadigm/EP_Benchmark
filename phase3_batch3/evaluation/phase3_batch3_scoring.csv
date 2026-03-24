@@ -1,0 +1,11 @@
+# phase3_batch3_scoring.csv
+task_id,system_variant,recognized_late_governing_condition,invalidated_initial_route,rollback_or_discard_clean,recomputed_under_corrected_condition,final_state_governance_clean,score_label,notes
+SWE_RECOMP_001,baseline,,,,,,, 
+SWE_RECOMP_001,baseline_scaffold,,,,,,, 
+SWE_RECOMP_001,ep,,,,,,, 
+TERM_RECOMP_001,baseline,,,,,,, 
+TERM_RECOMP_001,baseline_scaffold,,,,,,, 
+TERM_RECOMP_001,ep,,,,,,, 
+TOOL_RECOMP_001,baseline,,,,,,, 
+TOOL_RECOMP_001,baseline_scaffold,,,,,,, 
+TOOL_RECOMP_001,ep,,,,,,, 

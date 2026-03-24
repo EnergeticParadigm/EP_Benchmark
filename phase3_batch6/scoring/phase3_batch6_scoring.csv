@@ -1,0 +1,9 @@
+task_id,title,max_constraint_detection,max_path_invalidation_recognition,max_objective_preservation,max_replanning_quality,max_contradiction_control,max_waste_minimization,max_governance_alignment,max_total,gold_label,primary_failure_modes
+p3b6_t01,Late budget cap invalidates prior route,2,2,2,2,2,2,2,14,valid_recompute,"local_continuation_bias; cosmetic_patching; objective_drift"
+p3b6_t02,Approval denied near execution,2,2,2,2,2,2,2,14,valid_recompute,"constraint_ignored; local_continuation_bias; governance_overabort"
+p3b6_t03,Dependency conflict emerges late,2,2,2,2,2,2,2,14,valid_recompute,"path_invalidation_missed; cosmetic_patching; objective_drift"
+p3b6_t04,Safety rule blocks direct path,2,2,2,2,2,2,2,14,valid_recompute,"constraint_ignored; local_continuation_bias; governance_overabort"
+p3b6_t05,Time window collapse,2,2,2,2,2,2,2,14,valid_recompute,"path_invalidation_missed; dead_path_residue; objective_drift"
+p3b6_t06,Jurisdiction restriction appears late,2,2,2,2,2,2,2,14,valid_recompute,"constraint_ignored; cosmetic_patching; governance_overabort"
+p3b6_t07,Hidden invariant must be preserved,2,2,2,2,2,2,2,14,valid_recompute,"path_invalidation_missed; contradiction_with_prior_route; objective_drift"
+p3b6_t08,Foundational assumption is falsified,2,2,2,2,2,2,2,14,valid_recompute,"constraint_ignored; local_continuation_bias; dead_path_residue"

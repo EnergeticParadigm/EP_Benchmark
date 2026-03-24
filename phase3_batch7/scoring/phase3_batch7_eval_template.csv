@@ -1,0 +1,9 @@
+task_id,title,objective_detection,shortcut_risk_recognition,objective_preservation,replanning_quality,contradiction_control,proxy_metric_resistance,governance_alignment,total_score,outcome_label,notes
+p3b7_t01,Segment coverage vs easier reporting,,,,,,,,,,
+p3b7_t02,Visible data vs functional continuity,,,,,,,,,,
+p3b7_t03,Attendance vs capability transfer,,,,,,,,,,
+p3b7_t04,Backlog reduction vs resolution quality,,,,,,,,,,
+p3b7_t05,Faster audit vs defensible coverage,,,,,,,,,,
+p3b7_t06,Launch date vs ecosystem readiness,,,,,,,,,,
+p3b7_t07,Headcount vs operational fit,,,,,,,,,,
+p3b7_t08,Engagement vs correct action,,,,,,,,,,

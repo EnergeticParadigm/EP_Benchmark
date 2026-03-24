@@ -1,0 +1,4 @@
+These three JSONL files are placeholders only.
+They were created to establish the required filenames and schema.
+They are not empirical baseline/scaffold/EP outputs.
+Replace them with actual run results before using redraw_phase3_batch6_from_real_runs.py for reporting.

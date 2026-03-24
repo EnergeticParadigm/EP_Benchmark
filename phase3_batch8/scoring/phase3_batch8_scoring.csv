@@ -1,0 +1,9 @@
+task_id,title,max_stability_claim_recognition,max_hidden_fragility_detection,max_viability_judgment,max_redesign_quality,max_contradiction_control,max_fallback_awareness,max_governance_alignment,max_total,gold_label,primary_failure_modes
+p3b8_t01,Single approver fragility,2,2,2,2,2,2,2,14,valid_stability_reassessment,"false_stability_acceptance; hidden_fragility_missed; fallback_absence_ignored"
+p3b8_t02,Vendor delivery illusion,2,2,2,2,2,2,2,14,valid_stability_reassessment,"smoothness_bias; hidden_fragility_missed; brittle_path_preservation"
+p3b8_t03,Manual handoff fragility,2,2,2,2,2,2,2,14,valid_stability_reassessment,"false_stability_acceptance; fallback_absence_ignored; brittle_path_preservation"
+p3b8_t04,After-hours escalation gap,2,2,2,2,2,2,2,14,valid_stability_reassessment,"hidden_fragility_missed; governance_misalignment; fallback_absence_ignored"
+p3b8_t05,Instructor bottleneck,2,2,2,2,2,2,2,14,valid_stability_reassessment,"smoothness_bias; hidden_fragility_missed; fallback_absence_ignored"
+p3b8_t06,Suppressed repeat incidents,2,2,2,2,2,2,2,14,valid_stability_reassessment,"false_stability_acceptance; smoothness_bias; brittle_path_preservation"
+p3b8_t07,Untested rollback,2,2,2,2,2,2,2,14,valid_stability_reassessment,"hidden_fragility_missed; false_stability_acceptance; fallback_failure"
+p3b8_t08,Translator dependency,2,2,2,2,2,2,2,14,valid_stability_reassessment,"brittle_path_preservation; hidden_fragility_missed; fallback_absence_ignored"

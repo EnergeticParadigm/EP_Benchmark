@@ -1,0 +1,4 @@
+Restored files in results/ and figures/ are synthetic Batch 6 comparison artifacts.
+They are valid for design-validation only.
+They are not empirical baseline/scaffold/EP run outputs.
+Do not label them as real-run results.

@@ -1,0 +1,9 @@
+task_id,title,constraint_detection,path_invalidation_recognition,objective_preservation,replanning_quality,contradiction_control,waste_minimization,governance_alignment,total_score,outcome_label
+p3b6_t01,Late budget cap invalidates prior route,2,2,2,2,2,2,2,14,valid_recompute
+p3b6_t02,Approval denied near execution,2,2,2,2,2,2,2,14,valid_recompute
+p3b6_t03,Dependency conflict emerges late,2,2,2,2,2,2,2,14,valid_recompute
+p3b6_t04,Safety rule blocks direct path,2,2,2,2,2,2,2,14,valid_recompute
+p3b6_t05,Time window collapse,2,2,2,2,2,2,2,14,valid_recompute
+p3b6_t06,Jurisdiction restriction appears late,2,2,2,2,2,2,2,14,valid_recompute
+p3b6_t07,Hidden invariant must be preserved,2,2,2,2,2,2,2,14,valid_recompute
+p3b6_t08,Foundational assumption is falsified,2,2,2,2,2,2,2,14,valid_recompute

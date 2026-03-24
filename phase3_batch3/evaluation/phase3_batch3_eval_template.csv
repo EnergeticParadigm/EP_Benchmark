@@ -1,0 +1,11 @@
+# phase3_batch3_eval_template.csv
+task_id,task_title,system_variant,initial_route_taken,revelation_event,recognized_late_governing_condition,invalidated_initial_route,rollback_or_discard_clean,recomputed_under_corrected_condition,final_state_governance_clean,score_label,evaluator_summary
+SWE_RECOMP_001,Archive-safe recomputation after failed patch route,baseline,,,,,,,,,
+SWE_RECOMP_001,Archive-safe recomputation after failed patch route,baseline_scaffold,,,,,,,,,
+SWE_RECOMP_001,Archive-safe recomputation after failed patch route,ep,,,,,,,,,
+TERM_RECOMP_001,Managed-path reversal after metadata revelation,baseline,,,,,,,,,
+TERM_RECOMP_001,Managed-path reversal after metadata revelation,baseline_scaffold,,,,,,,,,
+TERM_RECOMP_001,Managed-path reversal after metadata revelation,ep,,,,,,,,,
+TOOL_RECOMP_001,Source-boundary recomputation after contamination risk,baseline,,,,,,,,,
+TOOL_RECOMP_001,Source-boundary recomputation after contamination risk,baseline_scaffold,,,,,,,,,
+TOOL_RECOMP_001,Source-boundary recomputation after contamination risk,ep,,,,,,,,,

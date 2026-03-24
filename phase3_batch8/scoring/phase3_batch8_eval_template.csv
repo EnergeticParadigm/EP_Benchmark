@@ -1,0 +1,9 @@
+task_id,title,stability_claim_recognition,hidden_fragility_detection,viability_judgment,redesign_quality,contradiction_control,fallback_awareness,governance_alignment,total_score,outcome_label,notes
+p3b8_t01,Single approver fragility,,,,,,,,,,
+p3b8_t02,Vendor delivery illusion,,,,,,,,,,
+p3b8_t03,Manual handoff fragility,,,,,,,,,,
+p3b8_t04,After-hours escalation gap,,,,,,,,,,
+p3b8_t05,Instructor bottleneck,,,,,,,,,,
+p3b8_t06,Suppressed repeat incidents,,,,,,,,,,
+p3b8_t07,Untested rollback,,,,,,,,,,
+p3b8_t08,Translator dependency,,,,,,,,,,
