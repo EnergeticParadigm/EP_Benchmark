@@ -1,128 +1,74 @@
-# Phase 3 Batch 9 Result Report
+# Phase 3 Batch 9 — Synthetic Design-Validation Report
 
-Phase 3 Batch 9 tests a different failure mode from Phase 3 Batch 6, Phase 3 Batch 7, and Phase 3 Batch 8.
+## Status
 
-Phase 3 Batch 6 tested whether a system could abandon a route after a late constraint made the old path globally invalid.
+This document is a synthetic design-validation report.
 
-Phase 3 Batch 7 tested whether a system could resist a tempting shortcut that improved a local metric while degrading the real objective.
+It does **not** present empirical benchmark measurements from real baseline, scaffold, or EP executions.
 
-Phase 3 Batch 8 tested whether a system could detect that a plan which looked smooth, orderly, and coherent was still structurally unstable.
+The files and diagrams for this batch were generated to validate benchmark structure, scoring logic, and mode separation design. They should be interpreted only as simulated benchmark outputs.
 
-Phase 3 Batch 9 tests whether a system can judge whether an apparent recovery path is actually sufficient after partial failure.
+## What is real in this batch
 
-That is the central meaning of this batch.
+The following parts are real benchmark-development artifacts:
 
-## What this batch is testing
+- the task family design;
+- the task set;
+- the scoring dimensions;
+- the scoring templates;
+- the failure-mode definitions;
+- the result-file schema;
+- the plotting and reporting pipeline.
 
-Each Batch 9 task is built around the same structural tension.
+## What is not empirical in this batch
 
-A route partially fails.  
-A fallback appears.  
-The fallback looks plausible.  
-The visible symptom improves.
+The following parts are **not** real measured results:
 
-But underneath that visible recovery, something important is still missing.
+- the three-mode score pattern;
+- the baseline/scaffold/EP totals;
+- the comparison charts as evidence of measured system performance;
+- any interpretation that real systems have already achieved those scores.
 
-Authority may still be missing.  
-Integrity may still be broken.  
-Capacity may still be insufficient.  
-Compliance may still be incomplete.  
-Auditability may still be lost.  
-The root dependency may still be unstable.
+## What this synthetic batch was intended to validate
 
-So this batch does not mainly test whether a system notices failure.  
-It tests whether a system mistakes fallback existence for recovery adequacy.
+Phase 3 Batch 9 was designed to test recovery-path adequacy under partial failure.
 
-That is why this batch is EP-sensitive.
+The structural distinction being tested is:
 
-## Synthetic three-mode result
+- shallow acceptance of visible fallback;
+- partial recognition that recovery remains inadequate;
+- full reassessment of whether restoration is truly sufficient.
 
-Across all 8 tasks, the synthetic three-mode separation was stable:
+The synthetic outputs were used only to validate that the benchmark can express this distinction clearly.
 
-- Baseline: 8/14
-- Scaffold: 12/14
-- EP: 14/14
+## Correct interpretation of the synthetic result pattern
 
-These numbers are per-task totals, not percentages.
+Any score pattern shown in this batch should be read only as:
 
-They matter only because they represent three different reasoning structures.
+“under the designed scoring logic, the benchmark can separate three reasoning regimes in principle.”
 
-## What 8 means
+It must **not** be read as:
 
-A score of 8 means the system accepts visible recovery as sufficient.
+“real systems have already been measured and produced these results.”
 
-It sees that a workaround exists, that some continuity has returned, or that the process is moving again, and it treats that as enough. It does not sufficiently ask whether the fallback restores the full function, the full governance condition, or the full operational viability.
+## Why this correction matters
 
-In Batch 9 terms, that is shallow recovery acceptance.
+This batch remains useful as benchmark-design work.
 
-## What 12 means
+But it must be labeled correctly.
 
-A score of 12 means the system does recognize that the fallback may be incomplete. It detects some adequacy gap and offers partial strengthening.
+The valid claim is:
 
-But it still underestimates how much recovery depth is missing. It improves the fallback somewhat, but still leaves too much of the restoration gap unresolved.
+Phase 3 Batch 9 is structurally capable of distinguishing between shallow fallback acceptance, partial recovery recognition, and true recovery-adequacy reassessment.
 
-In Batch 9 terms, that is partial recovery recognition.
+The invalid claim would be:
 
-## What 14 means
+Phase 3 Batch 9 has already produced empirical baseline/scaffold/EP benchmark results.
 
-A score of 14 means the system explicitly evaluates whether the fallback restores real function, integrity, authority, sustainability, and governance. It distinguishes visible symptom relief from actual restoration and redesigns the recovery path for true adequacy.
+## Final statement
 
-In Batch 9 terms, that is full recovery adequacy reassessment.
+Phase 3 Batch 9 currently contains real benchmark design work and synthetic validation artifacts.
 
-## Structural meaning of the result
+It does not yet contain empirical benchmark measurement.
 
-The real result is not the numbers themselves.
-
-The real result is the separation:
-
-- Baseline = shallow recovery acceptance
-- Scaffold = partial recovery recognition
-- EP = recovery adequacy reassessment
-
-That is what Batch 9 successfully isolates.
-
-This matters because many AI systems do not fail by ignoring failure completely. They fail by accepting the first visible fallback as sufficient.
-
-They restore access but lose auditability.  
-They restore interface behavior but not transaction integrity.  
-They restore message flow but not full stakeholder coverage.  
-They restore service motion but not sustainable service quality.  
-They resolve the symptom but leave the underlying dependency unstable.
-
-Those are not simple output errors. They are recovery-adequacy failures.
-
-Phase 3 Batch 9 was built to expose exactly that difference.
-
-## Why this batch matters
-
-Most benchmarks still reward visible recovery. They ask whether the system can continue, resume, or produce a fallback.
-
-But in real planning and deployment, one of the hardest problems is distinguishing between apparent recovery and actually sufficient recovery.
-
-That is why Batch 9 matters.
-
-It tests whether a system can judge recovery depth rather than fallback presence.
-
-That is a deeper and more operationally meaningful test than ordinary continuity restoration.
-
-## What this result does and does not show
-
-This result is a synthetic design-validation result, not an empirical model-run result.
-
-So the valid claim here is about benchmark design.
-
-Phase 3 Batch 9 already separates three distinct reasoning regimes in a clean and interpretable way:
-
-- acceptance of visible fallback as enough,
-- partial recognition that fallback is still too shallow,
-- and full reassessment of whether recovery is truly adequate.
-
-It does not yet prove that real baseline, scaffold, and EP systems will reproduce exactly the same pattern. That requires empirical runs.
-
-## Final conclusion
-
-Phase 3 Batch 9 is a valid EP-sensitive benchmark family because it isolates a core reasoning distinction that ordinary evaluation often misses:
-
-whether a system can tell the difference between a path that has resumed and a path that has actually been restored.
-
-That is the actual significance of the current Batch 9 result.
+Any future empirical report must be written only after real baseline, scaffold, and EP executions replace the synthetic files.
