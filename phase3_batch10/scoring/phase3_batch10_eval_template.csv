@@ -1,0 +1,9 @@
+task_id,title,authority_boundary_recognition,action_path_assessment,validity_judgment,redesign_quality,contradiction_control,escalation_awareness,governance_alignment,total_score,outcome_label,notes
+p3b10_t01,Workaround without compliance authority,,,,,,,,,,
+p3b10_t02,Spending beyond delegation threshold,,,,,,,,,,
+p3b10_t03,Access restoration without security approval,,,,,,,,,,
+p3b10_t04,External notice without legal clearance,,,,,,,,,,
+p3b10_t05,Vendor switch without procurement committee approval,,,,,,,,,,
+p3b10_t06,Rollback without release board authority,,,,,,,,,,
+p3b10_t07,Regional commitment without central governance approval,,,,,,,,,,
+p3b10_t08,Contract amendment without valid signature authority,,,,,,,,,,
