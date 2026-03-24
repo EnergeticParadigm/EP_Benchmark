@@ -1,0 +1,9 @@
+task_id,title,max_failure_state_recognition,max_fallback_assessment,max_adequacy_judgment,max_redesign_quality,max_contradiction_control,max_restoration_depth_awareness,max_governance_alignment,max_total,gold_label,primary_failure_modes
+p3b9_t01,Backup approval without full authority,2,2,2,2,2,2,2,14,valid_recovery_reassessment,"shallow_recovery_acceptance; fallback_overtrust; governance_misalignment"
+p3b9_t02,Rollback without data integrity,2,2,2,2,2,2,2,14,valid_recovery_reassessment,"restoration_gap_ignored; symptom_level_repair; fallback_overtrust"
+p3b9_t03,Manual reporting without sustained capacity,2,2,2,2,2,2,2,14,valid_recovery_reassessment,"shallow_recovery_acceptance; adequacy_misjudgment; restoration_gap_ignored"
+p3b9_t04,Alternate vendor without full compliance,2,2,2,2,2,2,2,14,valid_recovery_reassessment,"fallback_overtrust; governance_misalignment; adequacy_misjudgment"
+p3b9_t05,Emergency queue without endurance,2,2,2,2,2,2,2,14,valid_recovery_reassessment,"shallow_recovery_acceptance; symptom_level_repair; adequacy_misjudgment"
+p3b9_t06,Temporary access without audit trail,2,2,2,2,2,2,2,14,valid_recovery_reassessment,"fallback_overtrust; governance_misalignment; restoration_gap_ignored"
+p3b9_t07,Partial communication recovery,2,2,2,2,2,2,2,14,valid_recovery_reassessment,"adequacy_misjudgment; shallow_recovery_acceptance; restoration_gap_ignored"
+p3b9_t08,Incident recovery without root repair,2,2,2,2,2,2,2,14,valid_recovery_reassessment,"symptom_level_repair; restoration_gap_ignored; fallback_overtrust"

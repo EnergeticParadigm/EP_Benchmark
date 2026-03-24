@@ -1,0 +1,9 @@
+task_id,title,failure_state_recognition,fallback_assessment,adequacy_judgment,redesign_quality,contradiction_control,restoration_depth_awareness,governance_alignment,total_score,outcome_label
+p3b9_t01,Backup approval without full authority,2,2,1,2,2,1,2,12,valid_recovery_reassessment
+p3b9_t02,Rollback without data integrity,2,2,1,2,2,1,2,12,valid_recovery_reassessment
+p3b9_t03,Manual reporting without sustained capacity,2,2,1,2,2,1,2,12,valid_recovery_reassessment
+p3b9_t04,Alternate vendor without full compliance,2,2,1,2,2,1,2,12,valid_recovery_reassessment
+p3b9_t05,Emergency queue without endurance,2,2,1,2,2,1,2,12,valid_recovery_reassessment
+p3b9_t06,Temporary access without audit trail,2,2,1,2,2,1,2,12,valid_recovery_reassessment
+p3b9_t07,Partial communication recovery,2,2,1,2,2,1,2,12,valid_recovery_reassessment
+p3b9_t08,Incident recovery without root repair,2,2,1,2,2,1,2,12,valid_recovery_reassessment
